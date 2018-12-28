@@ -1,0 +1,6 @@
+framework module JXJXCategoryView {
+  umbrella header "JXJXCategoryView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "JXJXCategoryView",
+  "version": "0.1.0",
+  "summary": "A short description of JXJXCategoryView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhmios/JXJXCategoryView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhmios": "1938708066@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/zhmios/JXJXCategoryView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JXJXCategoryView/Classes/**/*"
+}

@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - JXJXCategoryView (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - JXJXCategoryView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  JXJXCategoryView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  JXJXCategoryView: ca52322ae35ec169bb31ae51ac7385eb383f02f2
+
+PODFILE CHECKSUM: d584fd08d93f2c5e8c3c7c07c7f23af279accdd6
+
+COCOAPODS: 1.5.3

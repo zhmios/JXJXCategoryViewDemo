@@ -1,0 +1,6 @@
+framework module Pods_JXJXCategoryView_Tests {
+  umbrella header "Pods-JXJXCategoryView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
