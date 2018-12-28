@@ -32,4 +32,9 @@ typedef NS_ENUM(NSUInteger, JXCategoryIndicatorLineStyle) {
 
 @property (nonatomic, strong) UIColor *indicatorLineViewColor;   //默认为[UIColor redColor]
 
+//对line的长度比例调节
+@property (nonatomic,assign)CGFloat lineWidthFactor;
+//对line的长度数量进行调节
+@property (nonatomic,assign)CGFloat lineExtWidth;
+
 @end

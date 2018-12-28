@@ -59,7 +59,7 @@
             targetX = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
 
             if (self.indicatorLineWidth == JXCategoryViewAutomaticDimension) {
-                targetWidth = [JXCategoryFactory interpolationFrom:leftCellFrame.size.width to:rightCellFrame.size.width percent:percent];
+                targetWidth = [JXCategoryFactory interpolationFrom:(leftCellFrame.size.width * self.lineWidthFactor)+ self.lineExtWidth to:(rightCellFrame.size.width * self.lineWidthFactor) + self.lineExtWidth percent:percent];
             }
         }else if (self.lineStyle == JXCategoryIndicatorLineStyle_JD) {
             CGFloat maxWidth = rightX - leftX + rightWidth;
@@ -124,7 +124,7 @@
 - (CGFloat)getIndicatorLineViewWidth:(CGRect)cellFrame
 {
     if (self.indicatorLineWidth == JXCategoryViewAutomaticDimension) {
-        return cellFrame.size.width;
+        return cellFrame.size.width * self.lineWidthFactor + self.lineExtWidth;
     }
     return self.indicatorLineWidth;
 }
