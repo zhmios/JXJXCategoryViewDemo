@@ -7,6 +7,7 @@
 //
 
 #import "HMViewController.h"
+#import "UBOneLessonListViewController.h"
 
 @interface HMViewController ()
 
@@ -19,6 +20,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)btnPress:(id)sender {
+    
+    UBOneLessonListViewController *controller = [[UBOneLessonListViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

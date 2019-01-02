@@ -146,8 +146,15 @@
         }
 
         JXCategoryBaseCell *leftCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:baseIndex inSection:0]];
+        NSInteger showAnimationType = 0;
+        if (self.isShowSelectedAnimation) {
+            showAnimationType = self.showAnimationType;
+        }
+        leftCell.showTypeAnimation = showAnimationType;
         [leftCell reloadData:leftCellModel];
         JXCategoryBaseCell *rightCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:baseIndex + 1 inSection:0]];
+        rightCell.showTypeAnimation = showAnimationType;
+        
         [rightCell reloadData:rightCellModel];
     }
 }

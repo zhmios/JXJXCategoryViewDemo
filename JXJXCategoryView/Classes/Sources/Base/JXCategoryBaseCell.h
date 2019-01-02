@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) JXCategoryBaseCellModel *cellModel;
 
+@property(nonatomic, assign)NSInteger showTypeAnimation;
+
 - (void)initializeViews NS_REQUIRES_SUPER;
 
 - (void)reloadData:(JXCategoryBaseCellModel *)cellModel NS_REQUIRES_SUPER;

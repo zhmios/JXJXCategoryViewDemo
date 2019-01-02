@@ -22,6 +22,11 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6BA9CF5A21DC881700C4C225 /* UBOneLessonItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9CF4F21DC881600C4C225 /* UBOneLessonItemViewController.m */; };
+		6BA9CF5B21DC881700C4C225 /* UBOneLessonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9CF5021DC881600C4C225 /* UBOneLessonListViewController.m */; };
+		6BA9CF5C21DC881700C4C225 /* LBOCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9CF5121DC881600C4C225 /* LBOCBaseViewController.m */; };
+		6BA9CF5D21DC881700C4C225 /* UBOneLessonItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA9CF5421DC881600C4C225 /* UBOneLessonItemViewController.xib */; };
+		6BA9CF5E21DC881700C4C225 /* UBOneLessonRightGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9CF5821DC881600C4C225 /* UBOneLessonRightGradientView.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -57,6 +62,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6BA9CF4F21DC881600C4C225 /* UBOneLessonItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBOneLessonItemViewController.m; sourceTree = "<group>"; };
+		6BA9CF5021DC881600C4C225 /* UBOneLessonListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBOneLessonListViewController.m; sourceTree = "<group>"; };
+		6BA9CF5121DC881600C4C225 /* LBOCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBOCBaseViewController.m; sourceTree = "<group>"; };
+		6BA9CF5221DC881600C4C225 /* UBOneLessonListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBOneLessonListViewController.h; sourceTree = "<group>"; };
+		6BA9CF5321DC881600C4C225 /* UBOneLessonItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBOneLessonItemViewController.h; sourceTree = "<group>"; };
+		6BA9CF5421DC881600C4C225 /* UBOneLessonItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UBOneLessonItemViewController.xib; sourceTree = "<group>"; };
+		6BA9CF5521DC881600C4C225 /* LBOCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBOCBaseViewController.h; sourceTree = "<group>"; };
+		6BA9CF5821DC881600C4C225 /* UBOneLessonRightGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBOneLessonRightGradientView.m; sourceTree = "<group>"; };
+		6BA9CF5921DC881600C4C225 /* UBOneLessonRightGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBOneLessonRightGradientView.h; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		818AC7FA50F95B058C29F0C0 /* Pods-JXJXCategoryView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXJXCategoryView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXJXCategoryView_Tests/Pods-JXJXCategoryView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		872BAAE34004A48ED7ABECEB /* Pods-JXJXCategoryView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXJXCategoryView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXJXCategoryView_Example/Pods-JXJXCategoryView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +151,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* HMViewController.h */,
 				6003F5A6195388D20070C39A /* HMViewController.m */,
+				6BA9CF4D21DC881600C4C225 /* OneLessonList */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -183,6 +198,46 @@
 				B8742F6195FCCD7DA83EAB37 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		6BA9CF4D21DC881600C4C225 /* OneLessonList */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9CF4E21DC881600C4C225 /* Controller */,
+				6BA9CF5621DC881600C4C225 /* Model */,
+				6BA9CF5721DC881600C4C225 /* View */,
+			);
+			path = OneLessonList;
+			sourceTree = "<group>";
+		};
+		6BA9CF4E21DC881600C4C225 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9CF4F21DC881600C4C225 /* UBOneLessonItemViewController.m */,
+				6BA9CF5021DC881600C4C225 /* UBOneLessonListViewController.m */,
+				6BA9CF5121DC881600C4C225 /* LBOCBaseViewController.m */,
+				6BA9CF5221DC881600C4C225 /* UBOneLessonListViewController.h */,
+				6BA9CF5321DC881600C4C225 /* UBOneLessonItemViewController.h */,
+				6BA9CF5421DC881600C4C225 /* UBOneLessonItemViewController.xib */,
+				6BA9CF5521DC881600C4C225 /* LBOCBaseViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6BA9CF5621DC881600C4C225 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BA9CF5721DC881600C4C225 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BA9CF5821DC881600C4C225 /* UBOneLessonRightGradientView.m */,
+				6BA9CF5921DC881600C4C225 /* UBOneLessonRightGradientView.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B9D2058131193044F9951E57 /* Pods */ = {
@@ -279,6 +334,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6BA9CF5D21DC881700C4C225 /* UBOneLessonItemViewController.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -390,7 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA9CF5B21DC881700C4C225 /* UBOneLessonListViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HMAppDelegate.m in Sources */,
+				6BA9CF5A21DC881700C4C225 /* UBOneLessonItemViewController.m in Sources */,
+				6BA9CF5C21DC881700C4C225 /* LBOCBaseViewController.m in Sources */,
+				6BA9CF5E21DC881700C4C225 /* UBOneLessonRightGradientView.m in Sources */,
 				6003F5A7195388D20070C39A /* HMViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

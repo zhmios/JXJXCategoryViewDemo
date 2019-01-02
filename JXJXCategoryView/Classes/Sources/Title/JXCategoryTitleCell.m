@@ -51,10 +51,30 @@
     if (myCellModel.selected) {
         fontDescriptor = myCellModel.titleSelectedFont.fontDescriptor;
         pointSize = myCellModel.titleSelectedFont.pointSize;
+        if (self.showTypeAnimation) {
+            [UIView animateWithDuration:0.2 animations:^{
+                self.titleLabel.transform = CGAffineTransformScale(CGAffineTransformIdentity, myCellModel.titleLabelZoomScale, myCellModel.titleLabelZoomScale);
+            }];
+        }
+       
+    }else{
+        if (self.showTypeAnimation) {
+            [UIView animateWithDuration:0.2 animations:^{
+                self.titleLabel.transform = CGAffineTransformIdentity;
+            }];
+        }
+      
     }
     if (myCellModel.titleLabelZoomEnabled) {
-        self.titleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize*myCellModel.titleLabelZoomScale];
-        self.maskTitleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize*myCellModel.titleLabelZoomScale];
+        if (self.showTypeAnimation) {
+            self.titleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize * 1.0];
+            self.maskTitleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize * 1.0];
+        }else{
+            
+            self.titleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize*myCellModel.titleLabelZoomScale];
+            self.maskTitleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize*myCellModel.titleLabelZoomScale];
+        }
+      
     }else {
         self.titleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize];
         self.maskTitleLabel.font = [UIFont fontWithDescriptor:fontDescriptor size:pointSize];

@@ -92,6 +92,15 @@
 @property (nonatomic, assign) BOOL cellWidthZoomScrollGradientEnabled;     //手势滚动中，是否需要更新状态。默认为YES
 
 @property (nonatomic, assign) CGFloat cellWidthZoomScale;    //默认1.2，cellWidthZoomEnabled为YES才生效
+/**
+ 自定义是否使用标题动画
+ */
+@property (nonatomic, assign) BOOL isShowSelectedAnimation;
+/**
+ 自定义属性 使用的动画类型
+ */
+@property (nonatomic, assign) NSInteger showAnimationType;
+
 
 /**
  代码调用选中了目标index的item

@@ -232,9 +232,14 @@ struct DelegateFlags {
     [self refreshSelectedCellModel:selectedCellModel unselectedCellModel:lastCellModel];
 
     JXCategoryBaseCell *lastCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedIndex inSection:0]];
+    if (!self.isShowSelectedAnimation) {
+        self.showAnimationType = 0;
+    }
+    lastCell.showTypeAnimation = self.showAnimationType;
     [lastCell reloadData:lastCellModel];
 
     JXCategoryBaseCell *selectedCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0]];
+    selectedCell.showTypeAnimation = self.showAnimationType;
     [selectedCell reloadData:selectedCellModel];
 
     if (self.cellWidthZoomEnabled) {
@@ -381,6 +386,7 @@ struct DelegateFlags {
     if ([keyPath isEqualToString:@"contentOffset"] && (self.contentScrollView.isTracking || self.contentScrollView.isDecelerating)) {
         //用户滚动引起的contentOffset变化，才处理。
         CGPoint contentOffset = [change[NSKeyValueChangeNewKey] CGPointValue];
+        self.showAnimationType = 0;
         [self contentOffsetOfContentScrollViewDidChanged:contentOffset];
     }
 }
@@ -404,11 +410,13 @@ struct DelegateFlags {
     if (self.delegateFlags.didClickSelectedItemAtIndexFlag) {
         [self.delegate categoryView:self didClickSelectedItemAtIndex:index];
     }
-
+    self.showAnimationType = 1;
     [self selectCellAtIndex:index];
 }
 
 - (void)scrollselectItemAtIndex:(NSInteger)index {
+
+    self.showAnimationType = 0;
     if (self.delegateFlags.didScrollSelectedItemAtIndexFlag) {
         [self.delegate categoryView:self didScrollSelectedItemAtIndex:index];
     }
