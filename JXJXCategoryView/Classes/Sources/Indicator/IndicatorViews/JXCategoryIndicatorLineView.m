@@ -22,6 +22,8 @@
         _indicatorLineWidth = JXCategoryViewAutomaticDimension;
         _indicatorLineViewColor = [UIColor redColor];
         _indicatorLineViewCornerRadius = JXCategoryViewAutomaticDimension;
+        _lineWidthFactor = 1.0;
+        _lineExtWidth = 0;
     }
     return self;
 }
