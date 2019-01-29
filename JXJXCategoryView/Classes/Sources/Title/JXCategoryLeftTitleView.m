@@ -9,12 +9,14 @@
 
 @implementation JXCategoryLeftTitleView
 
+#pragma clang diagnostic push
 
+#pragma clang diagnostic ignored "-Wobjc-missing-super-calls"
 - (void)initializeViews{
-    
+   
     
 }
 
-
+#pragma clang diagnostic pop
 
 @end

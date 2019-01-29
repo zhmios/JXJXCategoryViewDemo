@@ -33,4 +33,11 @@
 
 @property (nonatomic, assign) CGFloat titleLabelZoomScale;    //默认1.2，titleLabelZoomEnabled为YES才生效
 
+/**
+ 标题会靠左显示
+ @param leftSpace 是距离左侧的距离，如果不传的话，默认20
+ @param cellSpacing 与属性设置的保持一致
+ */
+- (instancetype)initWithLeftStyle:(CGFloat)leftSpace cellSpacing:(CGFloat)cellSpacing;
+
 @end

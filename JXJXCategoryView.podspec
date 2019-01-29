@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXJXCategoryView'
-  s.version          = '0.1.1'
+  s.version          = '0.1.5'
   s.summary          = '对JXCategoryView数据选择器部分效果的微调'
 
 # This description is used to generate tags and improve search results.
