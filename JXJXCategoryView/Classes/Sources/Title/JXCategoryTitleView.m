@@ -36,6 +36,21 @@
     return self.titleFont;
 }
 
+- (instancetype)initWithLeftStyle:(CGFloat)leftSpace cellSpacing:(CGFloat)cellSpacing{
+   self = [super initWithLeftStyle:leftSpace cellSpacing:cellSpacing];
+    if (self) {
+        _titleLabelZoomEnabled = NO;
+        _titleLabelZoomScale = 1.2;
+        _titleColor = [UIColor blackColor];
+        _titleSelectedColor = [UIColor redColor];
+        _titleFont = [UIFont systemFontOfSize:15];
+        _titleColorGradientEnabled = NO;
+        _titleLabelMaskEnabled = NO;
+        _titleLabelZoomScrollGradientEnabled = YES;
+    }
+    return self;
+}
+
 #pragma mark - Override
 
 - (Class)preferredCellClass {

@@ -3,6 +3,7 @@
 #import "JXCategoryBaseView.h"
 #import "JXCategoryIndicatorView.h"
 #import "JXCategoryTitleView.h"
+#import "JXCategoryLeftTitleView.h"
 #import "JXCategoryImageView.h"
 #import "JXCategoryTitleImageView.h"
 #import "JXCategoryNumberView.h"

@@ -33,6 +33,20 @@
     [super initializeViews];
 }
 
+- (instancetype)initWithLeftStyle:(CGFloat)leftSpace cellSpacing:(CGFloat)cellSpacing{
+    self = [super initWithLeftStyle:leftSpace cellSpacing:cellSpacing];
+    if (self) {
+        _separatorLineShowEnabled = NO;
+        _separatorLineColor = [UIColor lightGrayColor];
+        _separatorLineSize = CGSizeMake(1/[UIScreen mainScreen].scale, 20);
+        _cellBackgroundColorGradientEnabled = NO;
+        _cellBackgroundUnselectedColor = [UIColor whiteColor];
+        _cellBackgroundSelectedColor = [UIColor lightGrayColor];
+    }
+   
+    return self;
+}
+
 - (void)setIndicators:(NSArray<UIView<JXCategoryIndicatorProtocol> *> *)indicators {
     for (UIView *component in self.indicators) {
         //先移除之前的component

@@ -93,6 +93,8 @@
 
 @property (nonatomic, assign) CGFloat cellWidthZoomScale;    //默认1.2，cellWidthZoomEnabled为YES才生效
 
+- (instancetype)initWithLeftStyle:(CGFloat)leftSpace cellSpacing:(CGFloat)cellSpacing;
+
 /**
  代码调用选中了目标index的item
 

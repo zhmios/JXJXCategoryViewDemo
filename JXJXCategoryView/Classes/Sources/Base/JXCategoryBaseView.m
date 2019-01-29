@@ -8,6 +8,7 @@
 
 #import "JXCategoryBaseView.h"
 #import "JXCategoryFactory.h"
+#import "UBLeftCommonCollectionViewFlowLayout.h"
 
 struct DelegateFlags {
     unsigned int didSelectedItemAtIndexFlag : 1;
@@ -22,7 +23,7 @@ struct DelegateFlags {
 @property (nonatomic, assign) struct DelegateFlags delegateFlags;
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, assign) CGFloat innerCellSpacing;
-
+@property (nonatomic, assign) NSInteger leftType;
 @end
 
 @implementation JXCategoryBaseView
@@ -93,6 +94,31 @@ struct DelegateFlags {
         collectionView;
     });
     [self addSubview:self.collectionView];
+}
+
+- (instancetype)initWithLeftStyle:(CGFloat)leftSpace cellSpacing:(CGFloat)cellSpacing{
+    self = [super init];
+    if (self) {
+       
+        self.collectionView = ({
+            UBLeftCommonCollectionViewFlowLayout *layout = [[UBLeftCommonCollectionViewFlowLayout alloc] init];
+            layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            JXCategoryCollectionView *collectionView = [[JXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+            
+            layout.leftDistance = leftSpace;
+            layout.fixSpaceitem = cellSpacing;
+            collectionView.backgroundColor = [UIColor clearColor];
+            collectionView.showsHorizontalScrollIndicator = NO;
+            collectionView.showsVerticalScrollIndicator = NO;
+            collectionView.dataSource = self;
+            collectionView.delegate = self;
+            [collectionView registerClass:[self preferredCellClass] forCellWithReuseIdentifier:NSStringFromClass([self preferredCellClass])];
+            collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            collectionView;
+        });
+        [self addSubview:self.collectionView];
+    }
+    return self;
 }
 
 - (void)setDefaultSelectedIndex:(NSInteger)defaultSelectedIndex
@@ -175,10 +201,10 @@ struct DelegateFlags {
     if (self.averageCellSpacingEnabled && totalItemWidth < self.bounds.size.width) {
         //如果总的内容宽度都没有超过视图度，就将cellWidth等分
         CGFloat cellSpacing = 0;
-        if (self.dataSource.count > 0) {
-            cellSpacing = (self.bounds.size.width - totalCellWidth)/(self.dataSource.count - 1 + 2);
-        }
-        self.innerCellSpacing = cellSpacing;
+//        if (self.dataSource.count > 0) {
+//            cellSpacing = (self.bounds.size.width - totalCellWidth)/(self.dataSource.count - 1 + 2);
+//        }
+        self.innerCellSpacing = self.cellSpacing;
         [self.dataSource enumerateObjectsUsingBlock:^(JXCategoryBaseCellModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.cellSpacing = cellSpacing;
         }];

@@ -1,9 +1,9 @@
 {
   "name": "JXJXCategoryView",
   "version": "0.1.0",
-  "summary": "A short description of JXJXCategoryView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/zhmios/JXJXCategoryView",
+  "summary": "对JXCategoryView数据选择器部分效果的微调",
+  "description": "对JXCategoryView数据选择器部分效果的微调和优化",
+  "homepage": "https://github.com/zhmios/JXJXCategoryViewDemo",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "zhmios": "1938708066@qq.com"
   },
   "source": {
-    "git": "https://github.com/zhmios/JXJXCategoryView.git",
+    "git": "https://github.com/zhmios/JXJXCategoryViewDemo.git",
     "tag": "0.1.0"
   },
   "platforms": {
