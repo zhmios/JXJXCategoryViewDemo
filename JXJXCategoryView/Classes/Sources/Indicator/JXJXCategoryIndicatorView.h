@@ -9,11 +9,11 @@
 #import "JXJXCategoryBaseView.h"
 #import "JXCategoryIndicatorCell.h"
 #import "JXCategoryIndicatorCellModel.h"
-#import "JXCategoryIndicatorProtocol.h"
+#import "JXJXCategoryIndicatorProtocol.h"
 
-@interface JXCategoryIndicatorView : JXJXCategoryBaseView
+@interface JXJXCategoryIndicatorView : JXJXCategoryBaseView
 
-@property (nonatomic, strong) NSArray <UIView<JXCategoryIndicatorProtocol> *> *indicators;
+@property (nonatomic, strong) NSArray <UIView<JXJXCategoryIndicatorProtocol> *> *indicators;
 
 //----------------------ellBackgroundColor-----------------------//
 @property (nonatomic, assign) BOOL cellBackgroundColorGradientEnabled;      //默认：NO

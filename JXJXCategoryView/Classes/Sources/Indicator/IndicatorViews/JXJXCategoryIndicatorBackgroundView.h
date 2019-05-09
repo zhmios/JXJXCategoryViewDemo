@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorComponentView.h"
+#import "JXJXCategoryIndicatorComponentView.h"
 
-@interface JXCategoryIndicatorBackgroundView : JXCategoryIndicatorComponentView
+@interface JXJXCategoryIndicatorBackgroundView : JXJXCategoryIndicatorComponentView
 
 @property (nonatomic, assign) CGFloat backgroundViewWidth;     //默认JXCategoryViewAutomaticDimension（与cellWidth相等）
 

@@ -10,7 +10,7 @@
 #import "JXCategoryBaseCell.h"
 #import "JXCategoryBaseCellModel.h"
 #import "JXCategoryCollectionView.h"
-#import "JXCategoryViewDefines.h"
+#import "JXJXCategoryViewDefines.h"
 
 @class JXJXCategoryBaseView;
 

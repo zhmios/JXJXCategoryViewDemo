@@ -6,17 +6,17 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryIndicatorView.h"
-#import "JXCategoryIndicatorBackgroundView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryIndicatorView.h"
+#import "JXJXCategoryIndicatorBackgroundView.h"
+#import "JXJXCategoryFactory.h"
 
-@interface JXCategoryIndicatorView()
+@interface JXJXCategoryIndicatorView()
 
 @property (nonatomic, strong) CALayer *backgroundEllipseLayer;
 
 @end
 
-@implementation JXCategoryIndicatorView
+@implementation JXJXCategoryIndicatorView
 
 - (void)initializeData {
     [super initializeData];
@@ -47,7 +47,7 @@
     return self;
 }
 
-- (void)setIndicators:(NSArray<UIView<JXCategoryIndicatorProtocol> *> *)indicators {
+- (void)setIndicators:(NSArray<UIView<JXJXCategoryIndicatorProtocol> *> *)indicators {
     for (UIView *component in self.indicators) {
         //先移除之前的component
         [component removeFromSuperview];
@@ -85,14 +85,14 @@
         }
     }
 
-    for (UIView<JXCategoryIndicatorProtocol> *component in self.indicators) {
+    for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
         if (self.dataSource.count <= 0) {
             component.hidden = YES;
         }else {
             component.hidden = NO;
             [component jx_refreshState:selectedCellFrame];
 
-            if ([component isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
+            if ([component isKindOfClass:[JXJXCategoryIndicatorBackgroundView class]]) {
                 CGRect maskFrame = component.frame;
                 maskFrame.origin.x = maskFrame.origin.x - selectedCellFrame.origin.x;
                 selectedCellModel.backgroundViewMaskFrame = maskFrame;
@@ -138,7 +138,7 @@
     }
 
     if (remainderRatio == 0) {
-        for (UIView<JXCategoryIndicatorProtocol> *component in self.indicators) {
+        for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
             [component jx_contentScrollViewDidScrollWithLeftCellFrame:leftCellFrame rightCellFrame:rightCellFrame selectedPosition:position percent:remainderRatio];
         }
     }else {
@@ -146,9 +146,9 @@
         JXCategoryIndicatorCellModel *rightCellModel = (JXCategoryIndicatorCellModel *)self.dataSource[baseIndex + 1];
         [self refreshLeftCellModel:leftCellModel rightCellModel:rightCellModel ratio:remainderRatio];
 
-        for (UIView<JXCategoryIndicatorProtocol> *component in self.indicators) {
+        for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
             [component jx_contentScrollViewDidScrollWithLeftCellFrame:leftCellFrame rightCellFrame:rightCellFrame selectedPosition:position percent:remainderRatio];
-            if ([component isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
+            if ([component isKindOfClass:[JXJXCategoryIndicatorBackgroundView class]]) {
                 CGRect leftMaskFrame = component.frame;
                 leftMaskFrame.origin.x = leftMaskFrame.origin.x - leftCellFrame.origin.x;
                 leftCellModel.backgroundViewMaskFrame = leftMaskFrame;
@@ -180,9 +180,9 @@
     CGRect clickedCellFrame = [self getTargetCellFrame:index];
 
     JXCategoryIndicatorCellModel *selectedCellModel = (JXCategoryIndicatorCellModel *)self.dataSource[index];
-    for (UIView<JXCategoryIndicatorProtocol> *component in self.indicators) {
+    for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
         [component jx_selectedCell:clickedCellFrame clickedRelativePosition:clickedPosition];
-        if ([component isKindOfClass:[JXCategoryIndicatorBackgroundView class]]) {
+        if ([component isKindOfClass:[JXJXCategoryIndicatorBackgroundView class]]) {
             CGRect maskFrame = component.frame;
             maskFrame.origin.x = maskFrame.origin.x - clickedCellFrame.origin.x;
             selectedCellModel.backgroundViewMaskFrame = maskFrame;
@@ -202,17 +202,17 @@
         JXCategoryIndicatorCellModel *leftModel = (JXCategoryIndicatorCellModel *)leftCellModel;
         JXCategoryIndicatorCellModel *rightModel = (JXCategoryIndicatorCellModel *)rightCellModel;
         if (leftModel.selected) {
-            leftModel.cellBackgroundSelectedColor = [JXCategoryFactory interpolationColorFrom:self.cellBackgroundSelectedColor to:self.cellBackgroundUnselectedColor percent:ratio];
+            leftModel.cellBackgroundSelectedColor = [JXJXCategoryFactory interpolationColorFrom:self.cellBackgroundSelectedColor to:self.cellBackgroundUnselectedColor percent:ratio];
             leftModel.cellBackgroundUnselectedColor = self.cellBackgroundUnselectedColor;
         }else {
-            leftModel.cellBackgroundUnselectedColor = [JXCategoryFactory interpolationColorFrom:self.cellBackgroundSelectedColor to:self.cellBackgroundUnselectedColor percent:ratio];
+            leftModel.cellBackgroundUnselectedColor = [JXJXCategoryFactory interpolationColorFrom:self.cellBackgroundSelectedColor to:self.cellBackgroundUnselectedColor percent:ratio];
             leftModel.cellBackgroundSelectedColor = self.cellBackgroundSelectedColor;
         }
         if (rightModel.selected) {
-            rightModel.cellBackgroundSelectedColor = [JXCategoryFactory interpolationColorFrom:self.cellBackgroundUnselectedColor to:self.cellBackgroundSelectedColor percent:ratio];
+            rightModel.cellBackgroundSelectedColor = [JXJXCategoryFactory interpolationColorFrom:self.cellBackgroundUnselectedColor to:self.cellBackgroundSelectedColor percent:ratio];
             rightModel.cellBackgroundUnselectedColor = self.cellBackgroundUnselectedColor;
         }else {
-            rightModel.cellBackgroundUnselectedColor = [JXCategoryFactory interpolationColorFrom:self.cellBackgroundUnselectedColor to:self.cellBackgroundSelectedColor percent:ratio];
+            rightModel.cellBackgroundUnselectedColor = [JXJXCategoryFactory interpolationColorFrom:self.cellBackgroundUnselectedColor to:self.cellBackgroundSelectedColor percent:ratio];
             rightModel.cellBackgroundSelectedColor = self.cellBackgroundSelectedColor;
         }
     }

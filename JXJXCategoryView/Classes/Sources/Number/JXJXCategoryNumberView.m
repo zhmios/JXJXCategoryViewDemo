@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryNumberView.h"
+#import "JXJXCategoryNumberView.h"
 
-@implementation JXCategoryNumberView
+@implementation JXJXCategoryNumberView
 
 - (void)initializeData {
     [super initializeData];

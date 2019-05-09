@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JXCategoryIndicatorProtocol.h"
-#import "JXCategoryViewDefines.h"
+#import "JXJXCategoryIndicatorProtocol.h"
+#import "JXJXCategoryViewDefines.h"
 
-@interface JXCategoryIndicatorComponentView : UIView <JXCategoryIndicatorProtocol>
+@interface JXJXCategoryIndicatorComponentView : UIView <JXJXCategoryIndicatorProtocol>
 
 @property (nonatomic, assign) JXCategoryComponentPosition componentPosition;
 

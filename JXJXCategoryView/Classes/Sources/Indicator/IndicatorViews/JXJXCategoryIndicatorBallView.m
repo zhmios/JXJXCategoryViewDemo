@@ -6,16 +6,16 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorBallView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryIndicatorBallView.h"
+#import "JXJXCategoryFactory.h"
 
-@interface JXCategoryIndicatorBallView ()
+@interface JXJXCategoryIndicatorBallView ()
 @property (nonatomic, strong) UIView *smallBall;
 @property (nonatomic, strong) UIView *bigBall;
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
 @end
 
-@implementation JXCategoryIndicatorBallView
+@implementation JXJXCategoryIndicatorBallView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -73,12 +73,12 @@
 
         //前50%，移动bigBall的x，缩小smallBall；后50%，移动bigBall的x，缩小smallBall，移动smallBall的x
         if (percent <= 0.5) {
-            targetXOfBigBall = [JXCategoryFactory interpolationFrom:leftX to:(rightX - self.ballScrollOffsetX) percent:percent*2];
-            targetWidthOfSmallBall = [JXCategoryFactory interpolationFrom:self.ballViewSize.width to:self.ballViewSize.width/2 percent:percent*2];
+            targetXOfBigBall = [JXJXCategoryFactory interpolationFrom:leftX to:(rightX - self.ballScrollOffsetX) percent:percent*2];
+            targetWidthOfSmallBall = [JXJXCategoryFactory interpolationFrom:self.ballViewSize.width to:self.ballViewSize.width/2 percent:percent*2];
         }else {
-            targetXOfBigBall = [JXCategoryFactory interpolationFrom:(rightX - self.ballScrollOffsetX) to:rightX percent:(percent - 0.5)*2];
-            targetWidthOfSmallBall = [JXCategoryFactory interpolationFrom:self.ballViewSize.width/2 to:0 percent:(percent - 0.5)*2];
-            targetXOfSmallBall = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:(percent - 0.5)*2];
+            targetXOfBigBall = [JXJXCategoryFactory interpolationFrom:(rightX - self.ballScrollOffsetX) to:rightX percent:(percent - 0.5)*2];
+            targetWidthOfSmallBall = [JXJXCategoryFactory interpolationFrom:self.ballViewSize.width/2 to:0 percent:(percent - 0.5)*2];
+            targetXOfSmallBall = [JXJXCategoryFactory interpolationFrom:leftX to:rightX percent:(percent - 0.5)*2];
         }
     }
 

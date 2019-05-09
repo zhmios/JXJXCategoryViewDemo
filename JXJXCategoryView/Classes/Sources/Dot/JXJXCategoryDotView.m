@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryDotView.h"
+#import "JXJXCategoryDotView.h"
 
-@implementation JXCategoryDotView
+@implementation JXJXCategoryDotView
 
 - (void)initializeData {
     [super initializeData];

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorComponentView.h"
+#import "JXJXCategoryIndicatorComponentView.h"
 
-@implementation JXCategoryIndicatorComponentView
+@implementation JXJXCategoryIndicatorComponentView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

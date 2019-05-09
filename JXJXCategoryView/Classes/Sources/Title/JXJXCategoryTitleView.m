@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryTitleView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryFactory.h"
 
 @interface JXJXCategoryTitleView ()
 
@@ -87,24 +87,24 @@
     JXCategoryTitleCellModel *rightModel = (JXCategoryTitleCellModel *)rightCellModel;
 
     if (self.titleLabelZoomEnabled && self.titleLabelZoomScrollGradientEnabled) {
-        leftModel.titleLabelZoomScale = [JXCategoryFactory interpolationFrom:self.titleLabelZoomScale to:1.0 percent:ratio];
-        rightModel.titleLabelZoomScale = [JXCategoryFactory interpolationFrom:1.0 to:self.titleLabelZoomScale percent:ratio];
+        leftModel.titleLabelZoomScale = [JXJXCategoryFactory interpolationFrom:self.titleLabelZoomScale to:1.0 percent:ratio];
+        rightModel.titleLabelZoomScale = [JXJXCategoryFactory interpolationFrom:1.0 to:self.titleLabelZoomScale percent:ratio];
     }
 
     if (self.titleColorGradientEnabled) {
         //处理颜色渐变
         if (leftModel.selected) {
-            leftModel.titleSelectedColor = [JXCategoryFactory interpolationColorFrom:self.titleSelectedColor to:self.titleColor percent:ratio];
+            leftModel.titleSelectedColor = [JXJXCategoryFactory interpolationColorFrom:self.titleSelectedColor to:self.titleColor percent:ratio];
             leftModel.titleColor = self.titleColor;
         }else {
-            leftModel.titleColor = [JXCategoryFactory interpolationColorFrom:self.titleSelectedColor to:self.titleColor percent:ratio];
+            leftModel.titleColor = [JXJXCategoryFactory interpolationColorFrom:self.titleSelectedColor to:self.titleColor percent:ratio];
             leftModel.titleSelectedColor = self.titleSelectedColor;
         }
         if (rightModel.selected) {
-            rightModel.titleSelectedColor = [JXCategoryFactory interpolationColorFrom:self.titleColor to:self.titleSelectedColor percent:ratio];
+            rightModel.titleSelectedColor = [JXJXCategoryFactory interpolationColorFrom:self.titleColor to:self.titleSelectedColor percent:ratio];
             rightModel.titleColor = self.titleColor;
         }else {
-            rightModel.titleColor = [JXCategoryFactory interpolationColorFrom:self.titleColor to:self.titleSelectedColor percent:ratio];
+            rightModel.titleColor = [JXJXCategoryFactory interpolationColorFrom:self.titleColor to:self.titleSelectedColor percent:ratio];
             rightModel.titleSelectedColor = self.titleSelectedColor;
         }
     }

@@ -7,8 +7,8 @@
 //
 
 #import "JXJXCategoryIndicatorLineView.h"
-#import "JXCategoryFactory.h"
-#import "JXCategoryViewDefines.h"
+#import "JXJXCategoryFactory.h"
+#import "JXJXCategoryViewDefines.h"
 
 @implementation JXJXCategoryIndicatorLineView
 
@@ -56,31 +56,31 @@
         CGFloat rightX = rightCellFrame.origin.x + (rightCellFrame.size.width - rightWidth)/2;
 
         if (self.lineStyle == JXCategoryIndicatorLineStyle_Normal) {
-            targetX = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
+            targetX = [JXJXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
 
             if (self.indicatorLineWidth == JXCategoryViewAutomaticDimension) {
-                targetWidth = [JXCategoryFactory interpolationFrom:(leftCellFrame.size.width * self.lineWidthFactor)+ self.lineExtWidth to:(rightCellFrame.size.width * self.lineWidthFactor) + self.lineExtWidth percent:percent];
+                targetWidth = [JXJXCategoryFactory interpolationFrom:(leftCellFrame.size.width * self.lineWidthFactor)+ self.lineExtWidth to:(rightCellFrame.size.width * self.lineWidthFactor) + self.lineExtWidth percent:percent];
             }
         }else if (self.lineStyle == JXCategoryIndicatorLineStyle_JD) {
             CGFloat maxWidth = rightX - leftX + rightWidth;
             //前50%，只增加width；后50%，移动x并减小width
             if (percent <= 0.5) {
                 targetX = leftX;
-                targetWidth = [JXCategoryFactory interpolationFrom:leftWidth to:maxWidth percent:percent*2];
+                targetWidth = [JXJXCategoryFactory interpolationFrom:leftWidth to:maxWidth percent:percent*2];
             }else {
-                targetX = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:(percent - 0.5)*2];
-                targetWidth = [JXCategoryFactory interpolationFrom:maxWidth to:rightWidth percent:(percent - 0.5)*2];
+                targetX = [JXJXCategoryFactory interpolationFrom:leftX to:rightX percent:(percent - 0.5)*2];
+                targetWidth = [JXJXCategoryFactory interpolationFrom:maxWidth to:rightWidth percent:(percent - 0.5)*2];
             }
         }else if (self.lineStyle == JXCategoryIndicatorLineStyle_IQIYI) {
             //前50%，增加width，并少量移动x；后50%，少量移动x并减小width
             CGFloat offsetX = self.lineScrollOffsetX;//x的少量偏移量
             CGFloat maxWidth = rightX - leftX + rightWidth - offsetX*2;
             if (percent <= 0.5) {
-                targetX = [JXCategoryFactory interpolationFrom:leftX to:leftX + offsetX percent:percent*2];;
-                targetWidth = [JXCategoryFactory interpolationFrom:leftWidth to:maxWidth percent:percent*2];
+                targetX = [JXJXCategoryFactory interpolationFrom:leftX to:leftX + offsetX percent:percent*2];;
+                targetWidth = [JXJXCategoryFactory interpolationFrom:leftWidth to:maxWidth percent:percent*2];
             }else {
-                targetX = [JXCategoryFactory interpolationFrom:(leftX + offsetX) to:rightX percent:(percent - 0.5)*2];
-                targetWidth = [JXCategoryFactory interpolationFrom:maxWidth to:rightWidth percent:(percent - 0.5)*2];
+                targetX = [JXJXCategoryFactory interpolationFrom:(leftX + offsetX) to:rightX percent:(percent - 0.5)*2];
+                targetWidth = [JXJXCategoryFactory interpolationFrom:maxWidth to:rightWidth percent:(percent - 0.5)*2];
             }
         }
     }

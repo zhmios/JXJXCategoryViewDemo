@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorComponentView.h"
+#import "JXJXCategoryIndicatorComponentView.h"
 
-@interface JXCategoryIndicatorBallView : JXCategoryIndicatorComponentView
+@interface JXJXCategoryIndicatorBallView : JXJXCategoryIndicatorComponentView
 
 @property (nonatomic, assign) CGSize ballViewSize;  //默认：CGSizeMake(15, 15)
 

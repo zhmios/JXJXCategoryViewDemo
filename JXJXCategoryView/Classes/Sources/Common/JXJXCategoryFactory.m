@@ -6,10 +6,10 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryFactory.h"
 #import "UIColor+JXAdd.h"
 
-@implementation JXCategoryFactory
+@implementation JXJXCategoryFactory
 
 + (CGFloat)interpolationFrom:(CGFloat)from to:(CGFloat)to percent:(CGFloat)percent
 {

@@ -10,7 +10,7 @@
 #import "JXCategoryNumberCell.h"
 #import "JXCategoryNumberCellModel.h"
 
-@interface JXCategoryNumberView : JXJXCategoryTitleView
+@interface JXJXCategoryNumberView : JXJXCategoryTitleView
 
 /**
  需要与titles的count对应

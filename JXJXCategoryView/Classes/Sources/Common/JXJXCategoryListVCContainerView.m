@@ -6,15 +6,15 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryListVCContainerView.h"
+#import "JXJXCategoryListVCContainerView.h"
 
-@interface JXCategoryListVCContainerView () <UIScrollViewDelegate>
+@interface JXJXCategoryListVCContainerView () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, assign) NSInteger currentIndex;
 @property (nonatomic, assign) NSInteger targetIndex;
 @end
 
-@implementation JXCategoryListVCContainerView
+@implementation JXJXCategoryListVCContainerView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

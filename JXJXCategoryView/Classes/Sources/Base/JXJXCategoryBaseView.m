@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryBaseView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryFactory.h"
 #import "UBLeftCommonCollectionViewFlowLayout.h"
 
 struct DelegateFlags {
@@ -334,8 +334,8 @@ struct DelegateFlags {
         if (self.cellWidthZoomEnabled && self.cellWidthZoomScrollGradientEnabled) {
             JXCategoryBaseCellModel *leftCellModel = (JXCategoryBaseCellModel *)self.dataSource[baseIndex];
             JXCategoryBaseCellModel *rightCellModel = (JXCategoryBaseCellModel *)self.dataSource[baseIndex + 1];
-            leftCellModel.cellWidthZoomScale = [JXCategoryFactory interpolationFrom:self.cellWidthZoomScale to:1.0 percent:remainderRatio];
-            rightCellModel.cellWidthZoomScale = [JXCategoryFactory interpolationFrom:1.0 to:self.cellWidthZoomScale percent:remainderRatio];
+            leftCellModel.cellWidthZoomScale = [JXJXCategoryFactory interpolationFrom:self.cellWidthZoomScale to:1.0 percent:remainderRatio];
+            rightCellModel.cellWidthZoomScale = [JXJXCategoryFactory interpolationFrom:1.0 to:self.cellWidthZoomScale percent:remainderRatio];
             [self.collectionView.collectionViewLayout invalidateLayout];
         }
 

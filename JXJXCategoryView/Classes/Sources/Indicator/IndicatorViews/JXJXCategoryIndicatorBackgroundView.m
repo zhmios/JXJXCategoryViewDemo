@@ -6,10 +6,10 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorBackgroundView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryIndicatorBackgroundView.h"
+#import "JXJXCategoryFactory.h"
 
-@implementation JXCategoryIndicatorBackgroundView
+@implementation JXJXCategoryIndicatorBackgroundView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -51,10 +51,10 @@
         CGFloat leftX = leftCellFrame.origin.x + (leftCellFrame.size.width - leftWidth)/2;
         CGFloat rightX = rightCellFrame.origin.x + (rightCellFrame.size.width - rightWidth)/2;
 
-        targetX = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
+        targetX = [JXJXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
 
         if (self.backgroundViewWidth == JXCategoryViewAutomaticDimension) {
-            targetWidth = [JXCategoryFactory interpolationFrom:leftWidth to:rightWidth percent:percent];
+            targetWidth = [JXJXCategoryFactory interpolationFrom:leftWidth to:rightWidth percent:percent];
         }
     }
 

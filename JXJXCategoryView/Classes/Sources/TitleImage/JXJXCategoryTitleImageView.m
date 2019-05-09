@@ -6,12 +6,12 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleImageView.h"
+#import "JXJXCategoryTitleImageView.h"
 #import "JXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryFactory.h"
 
-@implementation JXCategoryTitleImageView
+@implementation JXJXCategoryTitleImageView
 
 - (void)dealloc
 {
@@ -89,8 +89,8 @@
     JXCategoryTitleImageCellModel *rightModel = (JXCategoryTitleImageCellModel *)rightCellModel;
 
     if (self.imageZoomEnabled) {
-        leftModel.imageZoomScale = [JXCategoryFactory interpolationFrom:self.imageZoomScale to:1.0 percent:ratio];
-        rightModel.imageZoomScale = [JXCategoryFactory interpolationFrom:1.0 to:self.imageZoomScale percent:ratio];
+        leftModel.imageZoomScale = [JXJXCategoryFactory interpolationFrom:self.imageZoomScale to:1.0 percent:ratio];
+        rightModel.imageZoomScale = [JXJXCategoryFactory interpolationFrom:1.0 to:self.imageZoomScale percent:ratio];
     }
 }
 

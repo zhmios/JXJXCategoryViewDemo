@@ -6,10 +6,10 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorImageView.h"
-#import "JXCategoryFactory.h"
+#import "JXJXCategoryIndicatorImageView.h"
+#import "JXJXCategoryFactory.h"
 
-@implementation JXCategoryIndicatorImageView
+@implementation JXJXCategoryIndicatorImageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -53,7 +53,7 @@
     }else {
         CGFloat leftX = leftCellFrame.origin.x + (leftCellFrame.size.width - targetWidth)/2;
         CGFloat rightX = rightCellFrame.origin.x + (rightCellFrame.size.width - targetWidth)/2;
-        targetX = [JXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
+        targetX = [JXJXCategoryFactory interpolationFrom:leftX to:rightX percent:percent];
     }
 
     //允许变动frame的情况：1、允许滚动；2、不允许滚动，但是已经通过手势滚动切换一页内容了；

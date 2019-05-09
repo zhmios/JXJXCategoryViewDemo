@@ -12,7 +12,7 @@
 /**
  使用方法参照demo工程的LoadDataViewController文件
  */
-@interface JXCategoryListVCContainerView : UIView
+@interface JXJXCategoryListVCContainerView : UIView
 
 @property (nonatomic, weak) UIViewController *parentViewController;
 @property (nonatomic, strong, readonly) UIScrollView *scrollView;

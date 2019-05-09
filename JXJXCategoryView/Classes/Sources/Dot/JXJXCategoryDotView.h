@@ -10,7 +10,7 @@
 #import "JXCategoryDotCell.h"
 #import "JXCategoryDotCellModel.h"
 
-@interface JXCategoryDotView : JXJXCategoryTitleView
+@interface JXJXCategoryDotView : JXJXCategoryTitleView
 
 @property (nonatomic, assign) JXCategoryDotRelativePosition relativePosition;   //相对于titleLabel的位置，默认：JXCategoryDotRelativePosition_TopRight
 
