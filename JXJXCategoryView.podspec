@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JXJXCategoryView'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = '对JXCategoryView数据选择器部分效果的微调'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhmios' => '1938708066@qq.com' }
-  s.source           = { :git => 'https://github.com/zhmios/JXJXCategoryViewDemo.git', :tag => s.version.to_s,:branch => feature-0.1.6}
+  s.source           = { :git => 'https://github.com/zhmios/JXJXCategoryViewDemo.git', :tag => s.version.to_s,:branch => 'feature-0.1.6'}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
