@@ -6,7 +6,7 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryBaseView.h"
+#import "JXJXCategoryBaseView.h"
 #import "JXCategoryFactory.h"
 #import "UBLeftCommonCollectionViewFlowLayout.h"
 
@@ -18,7 +18,7 @@ struct DelegateFlags {
     unsigned int scrollingFromLeftIndexToRightIndexFlag : 1;
 };
 
-@interface JXCategoryBaseView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface JXJXCategoryBaseView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, assign) struct DelegateFlags delegateFlags;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -26,7 +26,7 @@ struct DelegateFlags {
 @property (nonatomic, assign) NSInteger leftType;
 @end
 
-@implementation JXCategoryBaseView
+@implementation JXJXCategoryBaseView
 
 - (void)dealloc
 {

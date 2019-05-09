@@ -6,11 +6,11 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleView.h"
+#import "JXJXCategoryTitleView.h"
 #import "JXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
 
-@interface JXCategoryTitleImageView : JXCategoryTitleView
+@interface JXCategoryTitleImageView : JXJXCategoryTitleView
 
 @property (nonatomic, strong) NSArray <NSString *>*imageNames;
 

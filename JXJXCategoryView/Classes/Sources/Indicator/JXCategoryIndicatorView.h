@@ -6,12 +6,12 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryBaseView.h"
+#import "JXJXCategoryBaseView.h"
 #import "JXCategoryIndicatorCell.h"
 #import "JXCategoryIndicatorCellModel.h"
 #import "JXCategoryIndicatorProtocol.h"
 
-@interface JXCategoryIndicatorView : JXCategoryBaseView
+@interface JXCategoryIndicatorView : JXJXCategoryBaseView
 
 @property (nonatomic, strong) NSArray <UIView<JXCategoryIndicatorProtocol> *> *indicators;
 

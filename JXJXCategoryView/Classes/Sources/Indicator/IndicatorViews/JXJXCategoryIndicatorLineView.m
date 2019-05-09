@@ -6,11 +6,11 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorLineView.h"
+#import "JXJXCategoryIndicatorLineView.h"
 #import "JXCategoryFactory.h"
 #import "JXCategoryViewDefines.h"
 
-@implementation JXCategoryIndicatorLineView
+@implementation JXJXCategoryIndicatorLineView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

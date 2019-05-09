@@ -5,9 +5,9 @@
 //  Created by zhm on 2019/1/29.
 //
 
-#import "JXCategoryTitleView.h"
+#import "JXJXCategoryTitleView.h"
 
-@interface JXCategoryLeftTitleView : JXCategoryTitleView
+@interface JXJXCategoryLeftTitleView : JXJXCategoryTitleView
 
 
 

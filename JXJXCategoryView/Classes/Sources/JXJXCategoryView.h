@@ -1,9 +1,9 @@
 
 
-#import "JXCategoryBaseView.h"
+#import "JXJXCategoryBaseView.h"
 #import "JXCategoryIndicatorView.h"
-#import "JXCategoryTitleView.h"
-#import "JXCategoryLeftTitleView.h"
+#import "JXJXCategoryTitleView.h"
+#import "JXJXCategoryLeftTitleView.h"
 #import "JXCategoryImageView.h"
 #import "JXCategoryTitleImageView.h"
 #import "JXCategoryNumberView.h"
@@ -15,7 +15,7 @@
 #import "JXCategoryListVCContainerView.h"
 
 #import "JXCategoryIndicatorComponentView.h"
-#import "JXCategoryIndicatorLineView.h"
+#import "JXJXCategoryIndicatorLineView.h"
 #import "JXCategoryIndicatorTriangleView.h"
 #import "JXCategoryIndicatorImageView.h"
 #import "JXCategoryIndicatorBackgroundView.h"

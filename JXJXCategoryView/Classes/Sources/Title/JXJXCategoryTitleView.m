@@ -6,14 +6,14 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleView.h"
+#import "JXJXCategoryTitleView.h"
 #import "JXCategoryFactory.h"
 
-@interface JXCategoryTitleView ()
+@interface JXJXCategoryTitleView ()
 
 @end
 
-@implementation JXCategoryTitleView
+@implementation JXJXCategoryTitleView
 
 - (void)initializeData
 {

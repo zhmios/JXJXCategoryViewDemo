@@ -6,11 +6,11 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleView.h"
+#import "JXJXCategoryTitleView.h"
 #import "JXCategoryDotCell.h"
 #import "JXCategoryDotCellModel.h"
 
-@interface JXCategoryDotView : JXCategoryTitleView
+@interface JXCategoryDotView : JXJXCategoryTitleView
 
 @property (nonatomic, assign) JXCategoryDotRelativePosition relativePosition;   //相对于titleLabel的位置，默认：JXCategoryDotRelativePosition_TopRight
 

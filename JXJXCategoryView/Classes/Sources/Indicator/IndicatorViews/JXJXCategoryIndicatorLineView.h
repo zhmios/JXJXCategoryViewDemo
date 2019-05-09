@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, JXCategoryIndicatorLineStyle) {
     JXCategoryIndicatorLineStyle_IQIYI,
 };
 
-@interface JXCategoryIndicatorLineView : JXCategoryIndicatorComponentView
+@interface JXJXCategoryIndicatorLineView : JXCategoryIndicatorComponentView
 
 @property (nonatomic, assign) JXCategoryIndicatorLineStyle lineStyle;
 

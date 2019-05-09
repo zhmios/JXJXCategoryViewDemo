@@ -12,7 +12,7 @@
 #import "JXCategoryCollectionView.h"
 #import "JXCategoryViewDefines.h"
 
-@class JXCategoryBaseView;
+@class JXJXCategoryBaseView;
 
 @protocol JXCategoryViewDelegate <NSObject>
 
@@ -24,7 +24,7 @@
  @param categoryView categoryView description
  @param index 选中的index
  */
-- (void)categoryView:(JXCategoryBaseView *)categoryView didSelectedItemAtIndex:(NSInteger)index;
+- (void)categoryView:(JXJXCategoryBaseView *)categoryView didSelectedItemAtIndex:(NSInteger)index;
 
 /**
  点击选中的情况才会调用该方法
@@ -32,7 +32,7 @@
  @param categoryView categoryView description
  @param index 选中的index
  */
-- (void)categoryView:(JXCategoryBaseView *)categoryView didClickSelectedItemAtIndex:(NSInteger)index;
+- (void)categoryView:(JXJXCategoryBaseView *)categoryView didClickSelectedItemAtIndex:(NSInteger)index;
 
 /**
  滚动选中的情况才会调用该方法
@@ -40,7 +40,7 @@
  @param categoryView categoryView description
  @param index 选中的index
  */
-- (void)categoryView:(JXCategoryBaseView *)categoryView didScrollSelectedItemAtIndex:(NSInteger)index;
+- (void)categoryView:(JXJXCategoryBaseView *)categoryView didScrollSelectedItemAtIndex:(NSInteger)index;
 
 
 /**
@@ -49,7 +49,7 @@
  @param categoryView categoryView description
  @param index index description
  */
-- (void)categoryView:(JXCategoryBaseView *)categoryView contentScrollViewTransitionToIndex:(NSInteger)index;
+- (void)categoryView:(JXJXCategoryBaseView *)categoryView contentScrollViewTransitionToIndex:(NSInteger)index;
 
 /**
  正在滚动中的回调
@@ -59,11 +59,11 @@
  @param rightIndex 正在滚动中，相对位置处于右边的index
  @param ratio 百分比
  */
-- (void)categoryView:(JXCategoryBaseView *)categoryView scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio;
+- (void)categoryView:(JXJXCategoryBaseView *)categoryView scrollingFromLeftIndex:(NSInteger)leftIndex toRightIndex:(NSInteger)rightIndex ratio:(CGFloat)ratio;
 
 @end
 
-@interface JXCategoryBaseView : UIView
+@interface JXJXCategoryBaseView : UIView
 
 @property (nonatomic, strong) JXCategoryCollectionView *collectionView;
 

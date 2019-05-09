@@ -10,7 +10,7 @@
 #import "JXCategoryTitleCell.h"
 #import "JXCategoryTitleCellModel.h"
 
-@interface JXCategoryTitleView : JXCategoryIndicatorView
+@interface JXJXCategoryTitleView : JXCategoryIndicatorView
 
 @property (nonatomic, strong) NSArray <NSString *>*titles;
 

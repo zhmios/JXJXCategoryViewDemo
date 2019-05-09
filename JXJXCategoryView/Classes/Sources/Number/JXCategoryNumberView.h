@@ -6,11 +6,11 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryTitleView.h"
+#import "JXJXCategoryTitleView.h"
 #import "JXCategoryNumberCell.h"
 #import "JXCategoryNumberCellModel.h"
 
-@interface JXCategoryNumberView : JXCategoryTitleView
+@interface JXCategoryNumberView : JXJXCategoryTitleView
 
 /**
  需要与titles的count对应

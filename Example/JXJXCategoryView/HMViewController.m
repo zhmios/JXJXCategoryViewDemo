@@ -7,7 +7,7 @@
 //
 
 #import "HMViewController.h"
-#import "JXCategoryView.h"
+#import "JXJXCategoryView.h"
 #import "UBOneLessonItemViewController.h"
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -19,9 +19,9 @@
 
 @interface HMViewController ()<JXCategoryViewDelegate, UIScrollViewDelegate>
 
-@property (nonatomic, strong) JXCategoryBaseView *categoryView;
+@property (nonatomic, strong) JXJXCategoryBaseView *categoryView;
 @property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) JXCategoryIndicatorLineView *lineView;
+@property (nonatomic, strong) JXJXCategoryIndicatorLineView *lineView;
 @property (nonatomic, assign) CGFloat navigationBarHeight;
 @property (nonatomic, strong) NSMutableArray *titles;
 
@@ -54,7 +54,7 @@
     self.scrollView.bounces = YES;
     [self.view addSubview:self.categoryView];
 
-    JXCategoryTitleView *titleCategoryView = (JXCategoryTitleView *)self.categoryView;
+    JXJXCategoryTitleView *titleCategoryView = (JXJXCategoryTitleView *)self.categoryView;
 
     titleCategoryView.titleColorGradientEnabled = YES;
     titleCategoryView.titleLabelZoomEnabled = YES;
@@ -65,7 +65,7 @@
     titleCategoryView.titleSelectedFont  = [UIFont systemFontOfSize:14];
     titleCategoryView.cellSpacing = 25;
     
-    JXCategoryIndicatorLineView *lineView = [[JXCategoryIndicatorLineView alloc] init];
+    JXJXCategoryIndicatorLineView *lineView = [[JXJXCategoryIndicatorLineView alloc] init];
     lineView.indicatorLineWidth = JXCategoryViewAutomaticDimension;
     lineView.indicatorLineViewColor = UIColorHEXA(0xffd100, 1.0);
     lineView.lineWidthFactor = 1.20;
@@ -84,22 +84,22 @@
         [self.scrollView addSubview:listVC.view];
     }
     self.scrollView.contentSize = CGSizeMake(width*self.titles.count, height);
-    JXCategoryTitleView *myCategoryView = (JXCategoryTitleView *)self.categoryView;
+    JXJXCategoryTitleView *myCategoryView = (JXJXCategoryTitleView *)self.categoryView;
     myCategoryView.titles = self.titles;
     [myCategoryView reloadData];
     
 }
 
-- (JXCategoryBaseView *)categoryView {
+- (JXJXCategoryBaseView *)categoryView {
     if (_categoryView == nil) {
         
-        _categoryView = [[JXCategoryLeftTitleView alloc] initWithLeftStyle:25 cellSpacing:25];
+        _categoryView = [[JXJXCategoryLeftTitleView alloc] initWithLeftStyle:25 cellSpacing:25];
     }
     return _categoryView;
 }
 
 - (Class)preferredCategoryViewClass {
-    return [JXCategoryLeftTitleView class];
+    return [JXJXCategoryLeftTitleView class];
 }
 - (Class)preferredListViewControllerClass {
     

@@ -5,9 +5,9 @@
 //  Created by zhm on 2019/1/29.
 //
 
-#import "JXCategoryLeftTitleView.h"
+#import "JXJXCategoryLeftTitleView.h"
 
-@implementation JXCategoryLeftTitleView
+@implementation JXJXCategoryLeftTitleView
 
 #pragma clang diagnostic push
 
