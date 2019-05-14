@@ -6,14 +6,14 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryDotCell.h"
+#import "JXJXCategoryDotCell.h"
 #import "JXCategoryDotCellModel.h"
 
-@interface JXCategoryDotCell ()
+@interface JXJXCategoryDotCell ()
 @property (nonatomic, strong) CALayer *dotLayer;
 @end
 
-@implementation JXCategoryDotCell
+@implementation JXJXCategoryDotCell
 
 - (void)initializeViews {
     [super initializeViews];

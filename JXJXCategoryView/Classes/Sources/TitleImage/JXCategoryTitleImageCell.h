@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleCell.h"
+#import "JXJXCategoryTitleCell.h"
 
-@interface JXCategoryTitleImageCell : JXCategoryTitleCell
+@interface JXCategoryTitleImageCell : JXJXCategoryTitleCell
 
 @property (nonatomic, strong) UIImageView *imageView;
 

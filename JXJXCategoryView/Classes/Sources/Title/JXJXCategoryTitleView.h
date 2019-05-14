@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryIndicatorView.h"
-#import "JXCategoryTitleCell.h"
+#import "JXJXCategoryTitleCell.h"
 #import "JXCategoryTitleCellModel.h"
 
 @interface JXJXCategoryTitleView : JXJXCategoryIndicatorView

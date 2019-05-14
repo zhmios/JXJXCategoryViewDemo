@@ -6,15 +6,15 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleCell.h"
+#import "JXJXCategoryTitleCell.h"
 #import "JXCategoryTitleCellModel.h"
 
-@interface JXCategoryTitleCell ()
+@interface JXJXCategoryTitleCell ()
 @property (nonatomic, strong) CALayer *maskLayer;
 
 @end
 
-@implementation JXCategoryTitleCell
+@implementation JXJXCategoryTitleCell
 
 - (void)initializeViews
 {

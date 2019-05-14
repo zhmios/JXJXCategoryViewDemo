@@ -20,7 +20,7 @@
 }
 
 - (Class)preferredCellClass {
-    return [JXCategoryDotCell class];
+    return [JXJXCategoryDotCell class];
 }
 
 - (void)refreshDataSource {

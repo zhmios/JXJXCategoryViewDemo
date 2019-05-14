@@ -8,7 +8,7 @@
 
 #import "JXCategoryIndicatorCell.h"
 
-@interface JXCategoryTitleCell : JXCategoryIndicatorCell
+@interface JXJXCategoryTitleCell : JXCategoryIndicatorCell
 
 @property (nonatomic, strong) UILabel *titleLabel;
 

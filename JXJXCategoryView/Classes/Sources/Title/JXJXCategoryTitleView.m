@@ -54,7 +54,7 @@
 #pragma mark - Override
 
 - (Class)preferredCellClass {
-    return [JXCategoryTitleCell class];
+    return [JXJXCategoryTitleCell class];
 }
 
 - (void)refreshDataSource {

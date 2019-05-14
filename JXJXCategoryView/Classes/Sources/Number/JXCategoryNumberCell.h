@@ -6,8 +6,8 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryTitleCell.h"
+#import "JXJXCategoryTitleCell.h"
 
-@interface JXCategoryNumberCell : JXCategoryTitleCell
+@interface JXCategoryNumberCell : JXJXCategoryTitleCell
 @property (nonatomic, strong) UILabel *numberLabel;
 @end
