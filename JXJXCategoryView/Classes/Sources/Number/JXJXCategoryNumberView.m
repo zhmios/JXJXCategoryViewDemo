@@ -17,13 +17,13 @@
 }
 
 - (Class)preferredCellClass {
-    return [JXCategoryNumberCell class];
+    return [JXJXCategoryNumberCell class];
 }
 
 - (void)refreshDataSource {
     NSMutableArray *tempArray = [NSMutableArray array];
     for (int i = 0; i < self.titles.count; i++) {
-        JXCategoryNumberCellModel *cellModel = [[JXCategoryNumberCellModel alloc] init];
+        JXJXCategoryNumberCellModel *cellModel = [[JXJXCategoryNumberCellModel alloc] init];
         [tempArray addObject:cellModel];
     }
     self.dataSource = tempArray;
@@ -32,7 +32,7 @@
 - (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
-    JXCategoryNumberCellModel *myCellModel = (JXCategoryNumberCellModel *)cellModel;
+    JXJXCategoryNumberCellModel *myCellModel = (JXJXCategoryNumberCellModel *)cellModel;
     myCellModel.count = [self.counts[index] integerValue];
 }
 

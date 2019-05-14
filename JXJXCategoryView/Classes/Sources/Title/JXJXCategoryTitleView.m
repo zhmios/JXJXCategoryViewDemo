@@ -60,7 +60,7 @@
 - (void)refreshDataSource {
     NSMutableArray *tempArray = [NSMutableArray array];
     for (int i = 0; i < self.titles.count; i++) {
-        JXCategoryTitleCellModel *cellModel = [[JXCategoryTitleCellModel alloc] init];
+        JXJXCategoryTitleCellModel *cellModel = [[JXJXCategoryTitleCellModel alloc] init];
         [tempArray addObject:cellModel];
     }
     self.dataSource = tempArray;
@@ -69,12 +69,12 @@
 - (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel {
     [super refreshSelectedCellModel:selectedCellModel unselectedCellModel:unselectedCellModel];
 
-    JXCategoryTitleCellModel *myUnselectedCellModel = (JXCategoryTitleCellModel *)unselectedCellModel;
+    JXJXCategoryTitleCellModel *myUnselectedCellModel = (JXJXCategoryTitleCellModel *)unselectedCellModel;
     myUnselectedCellModel.titleColor = self.titleColor;
     myUnselectedCellModel.titleSelectedColor = self.titleSelectedColor;
     myUnselectedCellModel.titleLabelZoomScale = 1.0;
 
-    JXCategoryTitleCellModel *myselectedCellModel = (JXCategoryTitleCellModel *)selectedCellModel;
+    JXJXCategoryTitleCellModel *myselectedCellModel = (JXJXCategoryTitleCellModel *)selectedCellModel;
     myselectedCellModel.titleColor = self.titleColor;
     myselectedCellModel.titleSelectedColor = self.titleSelectedColor;
     myselectedCellModel.titleLabelZoomScale = self.titleLabelZoomScale;
@@ -83,8 +83,8 @@
 - (void)refreshLeftCellModel:(JXJXCategoryBaseCellModel *)leftCellModel rightCellModel:(JXJXCategoryBaseCellModel *)rightCellModel ratio:(CGFloat)ratio {
     [super refreshLeftCellModel:leftCellModel rightCellModel:rightCellModel ratio:ratio];
 
-    JXCategoryTitleCellModel *leftModel = (JXCategoryTitleCellModel *)leftCellModel;
-    JXCategoryTitleCellModel *rightModel = (JXCategoryTitleCellModel *)rightCellModel;
+    JXJXCategoryTitleCellModel *leftModel = (JXJXCategoryTitleCellModel *)leftCellModel;
+    JXJXCategoryTitleCellModel *rightModel = (JXJXCategoryTitleCellModel *)rightCellModel;
 
     if (self.titleLabelZoomEnabled && self.titleLabelZoomScrollGradientEnabled) {
         leftModel.titleLabelZoomScale = [JXJXCategoryFactory interpolationFrom:self.titleLabelZoomScale to:1.0 percent:ratio];
@@ -121,7 +121,7 @@
 - (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
-    JXCategoryTitleCellModel *model = (JXCategoryTitleCellModel *)cellModel;
+    JXJXCategoryTitleCellModel *model = (JXJXCategoryTitleCellModel *)cellModel;
     model.titleFont = self.titleFont;
     model.titleSelectedFont = self.titleSelectedFont;
     model.titleColor = self.titleColor;

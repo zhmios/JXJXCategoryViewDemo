@@ -6,8 +6,8 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryNumberCellModel.h"
+#import "JXJXCategoryNumberCellModel.h"
 
-@implementation JXCategoryNumberCellModel
+@implementation JXJXCategoryNumberCellModel
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleCellModel.h"
+#import "JXJXCategoryTitleCellModel.h"
 
 typedef NS_ENUM(NSUInteger, JXCategoryTitleImageType) {
     JXCategoryTitleImageType_TopImage = 0,
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, JXCategoryTitleImageType) {
     JXCategoryTitleImageType_OnlyTitle,
 };
 
-@interface JXCategoryTitleImageCellModel : JXCategoryTitleCellModel
+@interface JXCategoryTitleImageCellModel : JXJXCategoryTitleCellModel
 
 @property (nonatomic, assign) JXCategoryTitleImageType imageType;
 

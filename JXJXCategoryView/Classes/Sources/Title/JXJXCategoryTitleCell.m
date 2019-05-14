@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryTitleCell.h"
-#import "JXCategoryTitleCellModel.h"
+#import "JXJXCategoryTitleCellModel.h"
 
 @interface JXJXCategoryTitleCell ()
 @property (nonatomic, strong) CALayer *maskLayer;
@@ -44,7 +44,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryTitleCellModel *myCellModel = (JXCategoryTitleCellModel *)cellModel;
+    JXJXCategoryTitleCellModel *myCellModel = (JXJXCategoryTitleCellModel *)cellModel;
 
     CGFloat pointSize = myCellModel.titleFont.pointSize;
     UIFontDescriptor *fontDescriptor = myCellModel.titleFont.fontDescriptor;

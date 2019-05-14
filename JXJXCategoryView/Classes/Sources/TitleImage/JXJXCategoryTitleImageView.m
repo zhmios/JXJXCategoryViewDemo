@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryTitleImageView.h"
-#import "JXCategoryTitleImageCell.h"
+#import "JXJXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
 #import "JXJXCategoryFactory.h"
 
@@ -28,7 +28,7 @@
 }
 
 - (Class)preferredCellClass {
-    return [JXCategoryTitleImageCell class];
+    return [JXJXCategoryTitleImageCell class];
 }
 
 - (void)refreshDataSource {

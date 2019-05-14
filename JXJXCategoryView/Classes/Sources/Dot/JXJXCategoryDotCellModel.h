@@ -6,7 +6,7 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleCellModel.h"
+#import "JXJXCategoryTitleCellModel.h"
 
 typedef NS_ENUM(NSUInteger, JXCategoryDotRelativePosition) {
     JXCategoryDotRelativePosition_TopLeft = 0,
@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, JXCategoryDotRelativePosition) {
     JXCategoryDotRelativePosition_BottomRight,
 };
 
-@interface JXJXCategoryDotCellModel : JXCategoryTitleCellModel
+@interface JXJXCategoryDotCellModel : JXJXCategoryTitleCellModel
 
 @property (nonatomic, assign) BOOL dotHidden;
 

@@ -6,14 +6,14 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleImageCell.h"
+#import "JXJXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
 
-@interface JXCategoryTitleImageCell()
+@interface JXJXCategoryTitleImageCell()
 
 @end
 
-@implementation JXCategoryTitleImageCell
+@implementation JXJXCategoryTitleImageCell
 
 - (void)initializeViews {
     [super initializeViews];

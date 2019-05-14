@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryTitleView.h"
-#import "JXCategoryTitleImageCell.h"
+#import "JXJXCategoryTitleImageCell.h"
 #import "JXCategoryTitleImageCellModel.h"
 
 @interface JXJXCategoryTitleImageView : JXJXCategoryTitleView

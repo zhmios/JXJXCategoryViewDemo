@@ -7,8 +7,8 @@
 //
 
 #import "JXJXCategoryTitleView.h"
-#import "JXCategoryNumberCell.h"
-#import "JXCategoryNumberCellModel.h"
+#import "JXJXCategoryNumberCell.h"
+#import "JXJXCategoryNumberCellModel.h"
 
 @interface JXJXCategoryNumberView : JXJXCategoryTitleView
 

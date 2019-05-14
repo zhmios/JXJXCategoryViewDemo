@@ -9,7 +9,7 @@
 #import "JXJXCategoryIndicatorCellModel.h"
 #import <UIKit/UIKit.h>
 
-@interface JXCategoryTitleCellModel : JXJXCategoryIndicatorCellModel
+@interface JXJXCategoryTitleCellModel : JXJXCategoryIndicatorCellModel
 
 @property (nonatomic, copy) NSString *title;
 

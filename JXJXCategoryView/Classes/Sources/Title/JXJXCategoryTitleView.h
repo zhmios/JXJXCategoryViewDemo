@@ -8,7 +8,7 @@
 
 #import "JXJXCategoryIndicatorView.h"
 #import "JXJXCategoryTitleCell.h"
-#import "JXCategoryTitleCellModel.h"
+#import "JXJXCategoryTitleCellModel.h"
 
 @interface JXJXCategoryTitleView : JXJXCategoryIndicatorView
 

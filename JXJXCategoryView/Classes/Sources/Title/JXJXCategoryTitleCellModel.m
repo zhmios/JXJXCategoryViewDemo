@@ -6,8 +6,8 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryTitleCellModel.h"
+#import "JXJXCategoryTitleCellModel.h"
 
-@implementation JXCategoryTitleCellModel
+@implementation JXJXCategoryTitleCellModel
 
 @end

@@ -8,6 +8,6 @@
 
 #import "JXJXCategoryTitleCell.h"
 
-@interface JXCategoryNumberCell : JXJXCategoryTitleCell
+@interface JXJXCategoryNumberCell : JXJXCategoryTitleCell
 @property (nonatomic, strong) UILabel *numberLabel;
 @end

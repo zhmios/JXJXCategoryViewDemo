@@ -6,14 +6,14 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryNumberCell.h"
-#import "JXCategoryNumberCellModel.h"
+#import "JXJXCategoryNumberCell.h"
+#import "JXJXCategoryNumberCellModel.h"
 
-@interface JXCategoryNumberCell ()
+@interface JXJXCategoryNumberCell ()
 
 @end
 
-@implementation JXCategoryNumberCell
+@implementation JXJXCategoryNumberCell
 
 - (void)initializeViews {
     [super initializeViews];
@@ -42,7 +42,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryNumberCellModel *myCellModel = (JXCategoryNumberCellModel *)cellModel;
+    JXJXCategoryNumberCellModel *myCellModel = (JXJXCategoryNumberCellModel *)cellModel;
     self.numberLabel.hidden = myCellModel.count == 0;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld", (long)myCellModel.count];
     if (myCellModel.count >= 1000) {
