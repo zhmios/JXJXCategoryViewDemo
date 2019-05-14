@@ -6,14 +6,14 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryIndicatorCell.h"
-#import "JXCategoryIndicatorCellModel.h"
+#import "JXJXCategoryIndicatorCell.h"
+#import "JXJXCategoryIndicatorCellModel.h"
 
-@interface JXCategoryIndicatorCell ()
+@interface JXJXCategoryIndicatorCell ()
 @property (nonatomic, strong) UIView *separatorLine;
 @end
 
-@implementation JXCategoryIndicatorCell
+@implementation JXJXCategoryIndicatorCell
 
 - (void)initializeViews
 {
@@ -28,7 +28,7 @@
 {
     [super layoutSubviews];
 
-    JXCategoryIndicatorCellModel *model = (JXCategoryIndicatorCellModel *)self.cellModel;
+    JXJXCategoryIndicatorCellModel *model = (JXJXCategoryIndicatorCellModel *)self.cellModel;
     CGFloat lineWidth = model.separatorLineSize.width;
     CGFloat lineHeight = model.separatorLineSize.height;
 
@@ -38,7 +38,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryIndicatorCellModel *model = (JXCategoryIndicatorCellModel *)cellModel;
+    JXJXCategoryIndicatorCellModel *model = (JXJXCategoryIndicatorCellModel *)cellModel;
     self.separatorLine.backgroundColor = model.separatorLineColor;
     self.separatorLine.hidden = !model.sepratorLineShowEnabled;
 

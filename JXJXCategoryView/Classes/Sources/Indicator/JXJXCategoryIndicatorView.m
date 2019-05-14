@@ -65,9 +65,9 @@
     [super refreshState];
 
     CGRect selectedCellFrame = CGRectZero;
-    JXCategoryIndicatorCellModel *selectedCellModel = nil;
+    JXJXCategoryIndicatorCellModel *selectedCellModel = nil;
     for (int i = 0; i < self.dataSource.count; i++) {
-        JXCategoryIndicatorCellModel *cellModel = (JXCategoryIndicatorCellModel *)self.dataSource[i];
+        JXJXCategoryIndicatorCellModel *cellModel = (JXJXCategoryIndicatorCellModel *)self.dataSource[i];
         cellModel.sepratorLineShowEnabled = self.separatorLineShowEnabled;
         cellModel.separatorLineColor = self.separatorLineColor;
         cellModel.separatorLineSize = self.separatorLineSize;
@@ -104,12 +104,12 @@
 - (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel {
     [super refreshSelectedCellModel:selectedCellModel unselectedCellModel:unselectedCellModel];
 
-    JXCategoryIndicatorCellModel *myUnselectedCellModel = (JXCategoryIndicatorCellModel *)unselectedCellModel;
+    JXJXCategoryIndicatorCellModel *myUnselectedCellModel = (JXJXCategoryIndicatorCellModel *)unselectedCellModel;
     myUnselectedCellModel.backgroundViewMaskFrame = CGRectZero;
     myUnselectedCellModel.cellBackgroundUnselectedColor = self.cellBackgroundUnselectedColor;
     myUnselectedCellModel.cellBackgroundSelectedColor = self.cellBackgroundSelectedColor;
 
-    JXCategoryIndicatorCellModel *myselectedCellModel = (JXCategoryIndicatorCellModel *)selectedCellModel;
+    JXJXCategoryIndicatorCellModel *myselectedCellModel = (JXJXCategoryIndicatorCellModel *)selectedCellModel;
     myselectedCellModel.cellBackgroundUnselectedColor = self.cellBackgroundUnselectedColor;
     myselectedCellModel.cellBackgroundSelectedColor = self.cellBackgroundSelectedColor;
 }
@@ -142,8 +142,8 @@
             [component jx_contentScrollViewDidScrollWithLeftCellFrame:leftCellFrame rightCellFrame:rightCellFrame selectedPosition:position percent:remainderRatio];
         }
     }else {
-        JXCategoryIndicatorCellModel *leftCellModel = (JXCategoryIndicatorCellModel *)self.dataSource[baseIndex];
-        JXCategoryIndicatorCellModel *rightCellModel = (JXCategoryIndicatorCellModel *)self.dataSource[baseIndex + 1];
+        JXJXCategoryIndicatorCellModel *leftCellModel = (JXJXCategoryIndicatorCellModel *)self.dataSource[baseIndex];
+        JXJXCategoryIndicatorCellModel *rightCellModel = (JXJXCategoryIndicatorCellModel *)self.dataSource[baseIndex + 1];
         [self refreshLeftCellModel:leftCellModel rightCellModel:rightCellModel ratio:remainderRatio];
 
         for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
@@ -179,7 +179,7 @@
 
     CGRect clickedCellFrame = [self getTargetCellFrame:index];
 
-    JXCategoryIndicatorCellModel *selectedCellModel = (JXCategoryIndicatorCellModel *)self.dataSource[index];
+    JXJXCategoryIndicatorCellModel *selectedCellModel = (JXJXCategoryIndicatorCellModel *)self.dataSource[index];
     for (UIView<JXJXCategoryIndicatorProtocol> *component in self.indicators) {
         [component jx_selectedCell:clickedCellFrame clickedRelativePosition:clickedPosition];
         if ([component isKindOfClass:[JXJXCategoryIndicatorBackgroundView class]]) {
@@ -189,7 +189,7 @@
         }
     }
 
-    JXCategoryIndicatorCell *selectedCell = (JXCategoryIndicatorCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    JXJXCategoryIndicatorCell *selectedCell = (JXJXCategoryIndicatorCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     [selectedCell reloadData:selectedCellModel];
 
     return YES;
@@ -199,8 +199,8 @@
 - (void)refreshLeftCellModel:(JXJXCategoryBaseCellModel *)leftCellModel rightCellModel:(JXJXCategoryBaseCellModel *)rightCellModel ratio:(CGFloat)ratio {
     if (self.cellBackgroundColorGradientEnabled) {
         //处理cell背景色渐变
-        JXCategoryIndicatorCellModel *leftModel = (JXCategoryIndicatorCellModel *)leftCellModel;
-        JXCategoryIndicatorCellModel *rightModel = (JXCategoryIndicatorCellModel *)rightCellModel;
+        JXJXCategoryIndicatorCellModel *leftModel = (JXJXCategoryIndicatorCellModel *)leftCellModel;
+        JXJXCategoryIndicatorCellModel *rightModel = (JXJXCategoryIndicatorCellModel *)rightCellModel;
         if (leftModel.selected) {
             leftModel.cellBackgroundSelectedColor = [JXJXCategoryFactory interpolationColorFrom:self.cellBackgroundSelectedColor to:self.cellBackgroundUnselectedColor percent:ratio];
             leftModel.cellBackgroundUnselectedColor = self.cellBackgroundUnselectedColor;

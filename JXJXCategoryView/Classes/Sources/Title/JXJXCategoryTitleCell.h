@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorCell.h"
+#import "JXJXCategoryIndicatorCell.h"
 
-@interface JXJXCategoryTitleCell : JXCategoryIndicatorCell
+@interface JXJXCategoryTitleCell : JXJXCategoryIndicatorCell
 
 @property (nonatomic, strong) UILabel *titleLabel;
 

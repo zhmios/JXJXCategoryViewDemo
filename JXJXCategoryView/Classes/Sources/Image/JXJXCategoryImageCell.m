@@ -6,10 +6,10 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryImageCell.h"
-#import "JXCategoryImageCellModel.h"
+#import "JXJXCategoryImageCell.h"
+#import "JXJXCategoryImageCellModel.h"
 
-@implementation JXCategoryImageCell
+@implementation JXJXCategoryImageCell
 
 - (void)initializeViews {
     [super initializeViews];
@@ -22,7 +22,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)self.cellModel;
+    JXJXCategoryImageCellModel *myCellModel = (JXJXCategoryImageCellModel *)self.cellModel;
     self.imageView.bounds = CGRectMake(0, 0, myCellModel.imageSize.width, myCellModel.imageSize.height);
     self.imageView.center = self.contentView.center;
 }
@@ -30,7 +30,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)cellModel;
+    JXJXCategoryImageCellModel *myCellModel = (JXJXCategoryImageCellModel *)cellModel;
     if (myCellModel.imageName != nil) {
         self.imageView.image = [UIImage imageNamed:myCellModel.imageName];
     }else if (myCellModel.imageURL != nil) {

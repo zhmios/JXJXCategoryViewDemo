@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryDotCell.h"
-#import "JXCategoryDotCellModel.h"
+#import "JXJXCategoryDotCellModel.h"
 
 @interface JXJXCategoryDotCell ()
 @property (nonatomic, strong) CALayer *dotLayer;
@@ -28,7 +28,7 @@
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
 
-    JXCategoryDotCellModel *myCellModel = (JXCategoryDotCellModel *)self.cellModel;
+    JXJXCategoryDotCellModel *myCellModel = (JXJXCategoryDotCellModel *)self.cellModel;
     self.dotLayer.bounds = CGRectMake(0, 0, myCellModel.dotSize.width, myCellModel.dotSize.height);
     switch (myCellModel.relativePosition) {
         case JXCategoryDotRelativePosition_TopLeft:
@@ -63,7 +63,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryDotCellModel *myCellModel = (JXCategoryDotCellModel *)cellModel;
+    JXJXCategoryDotCellModel *myCellModel = (JXJXCategoryDotCellModel *)cellModel;
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     self.dotLayer.hidden = !myCellModel.dotHidden;

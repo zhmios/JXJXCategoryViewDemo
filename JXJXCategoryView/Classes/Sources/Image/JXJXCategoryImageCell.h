@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorCell.h"
+#import "JXJXCategoryIndicatorCell.h"
 
-@interface JXCategoryImageCell : JXCategoryIndicatorCell
+@interface JXJXCategoryImageCell : JXJXCategoryIndicatorCell
 
 @property (nonatomic, strong) UIImageView *imageView;
 

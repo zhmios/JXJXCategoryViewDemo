@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, JXCategoryDotRelativePosition) {
     JXCategoryDotRelativePosition_BottomRight,
 };
 
-@interface JXCategoryDotCellModel : JXCategoryTitleCellModel
+@interface JXJXCategoryDotCellModel : JXCategoryTitleCellModel
 
 @property (nonatomic, assign) BOOL dotHidden;
 

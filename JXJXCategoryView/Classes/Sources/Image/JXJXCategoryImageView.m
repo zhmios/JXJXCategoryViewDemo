@@ -25,14 +25,14 @@
 }
 
 - (Class)preferredCellClass {
-    return [JXCategoryImageCell class];
+    return [JXJXCategoryImageCell class];
 }
 
 - (void)refreshDataSource {
     NSMutableArray *tempArray = [NSMutableArray array];
     NSUInteger count = (self.imageNames.count > 0) ? self.imageNames.count : (self.imageURLs.count > 0 ? self.imageURLs.count : 0);
     for (int i = 0; i < count; i++) {
-        JXCategoryImageCellModel *cellModel = [[JXCategoryImageCellModel alloc] init];
+        JXJXCategoryImageCellModel *cellModel = [[JXJXCategoryImageCellModel alloc] init];
         [tempArray addObject:cellModel];
     }
     self.dataSource = tempArray;
@@ -41,17 +41,17 @@
 - (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel {
     [super refreshSelectedCellModel:selectedCellModel unselectedCellModel:unselectedCellModel];
 
-    JXCategoryImageCellModel *myUnselectedCellModel = (JXCategoryImageCellModel *)unselectedCellModel;
+    JXJXCategoryImageCellModel *myUnselectedCellModel = (JXJXCategoryImageCellModel *)unselectedCellModel;
     myUnselectedCellModel.imageZoomScale = 1.0;
 
-    JXCategoryImageCellModel *myselectedCellModel = (JXCategoryImageCellModel *)selectedCellModel;
+    JXJXCategoryImageCellModel *myselectedCellModel = (JXJXCategoryImageCellModel *)selectedCellModel;
     myselectedCellModel.imageZoomScale = self.imageZoomScale;
 }
 
 - (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
-    JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)cellModel;
+    JXJXCategoryImageCellModel *myCellModel = (JXJXCategoryImageCellModel *)cellModel;
     myCellModel.loadImageCallback = self.loadImageCallback;
     myCellModel.imageSize = self.imageSize;
     if (self.imageNames != nil) {
@@ -74,8 +74,8 @@
 - (void)refreshLeftCellModel:(JXJXCategoryBaseCellModel *)leftCellModel rightCellModel:(JXJXCategoryBaseCellModel *)rightCellModel ratio:(CGFloat)ratio {
     [super refreshLeftCellModel:leftCellModel rightCellModel:rightCellModel ratio:ratio];
 
-    JXCategoryImageCellModel *leftModel = (JXCategoryImageCellModel *)leftCellModel;
-    JXCategoryImageCellModel *rightModel = (JXCategoryImageCellModel *)rightCellModel;
+    JXJXCategoryImageCellModel *leftModel = (JXJXCategoryImageCellModel *)leftCellModel;
+    JXJXCategoryImageCellModel *rightModel = (JXJXCategoryImageCellModel *)rightCellModel;
 
     if (self.imageZoomEnabled) {
         leftModel.imageZoomScale = [JXJXCategoryFactory interpolationFrom:self.imageZoomScale to:1.0 percent:ratio];

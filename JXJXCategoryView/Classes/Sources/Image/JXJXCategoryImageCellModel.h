@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorCellModel.h"
+#import "JXJXCategoryIndicatorCellModel.h"
 
-@interface JXCategoryImageCellModel : JXCategoryIndicatorCellModel
+@interface JXJXCategoryImageCellModel : JXJXCategoryIndicatorCellModel
 
 @property (nonatomic, copy) void(^loadImageCallback)(UIImageView *imageView);
 

@@ -6,10 +6,10 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryIndicatorCellModel.h"
+#import "JXJXCategoryIndicatorCellModel.h"
 #import <UIKit/UIKit.h>
 
-@interface JXCategoryTitleCellModel : JXCategoryIndicatorCellModel
+@interface JXCategoryTitleCellModel : JXJXCategoryIndicatorCellModel
 
 @property (nonatomic, copy) NSString *title;
 

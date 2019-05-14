@@ -6,8 +6,8 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryImageCellModel.h"
+#import "JXJXCategoryImageCellModel.h"
 
-@implementation JXCategoryImageCellModel
+@implementation JXJXCategoryImageCellModel
 
 @end

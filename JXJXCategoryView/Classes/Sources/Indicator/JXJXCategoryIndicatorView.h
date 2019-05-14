@@ -7,8 +7,8 @@
 //
 
 #import "JXJXCategoryBaseView.h"
-#import "JXCategoryIndicatorCell.h"
-#import "JXCategoryIndicatorCellModel.h"
+#import "JXJXCategoryIndicatorCell.h"
+#import "JXJXCategoryIndicatorCellModel.h"
 #import "JXJXCategoryIndicatorProtocol.h"
 
 @interface JXJXCategoryIndicatorView : JXJXCategoryBaseView

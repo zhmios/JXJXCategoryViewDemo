@@ -8,7 +8,7 @@
 
 #import "JXJXCategoryTitleView.h"
 #import "JXJXCategoryDotCell.h"
-#import "JXCategoryDotCellModel.h"
+#import "JXJXCategoryDotCellModel.h"
 
 @interface JXJXCategoryDotView : JXJXCategoryTitleView
 

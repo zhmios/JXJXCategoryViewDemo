@@ -26,7 +26,7 @@
 - (void)refreshDataSource {
     NSMutableArray *tempArray = [NSMutableArray array];
     for (int i = 0; i < self.titles.count; i++) {
-        JXCategoryDotCellModel *cellModel = [[JXCategoryDotCellModel alloc] init];
+        JXJXCategoryDotCellModel *cellModel = [[JXJXCategoryDotCellModel alloc] init];
         [tempArray addObject:cellModel];
     }
     self.dataSource = tempArray;
@@ -35,7 +35,7 @@
 - (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
-    JXCategoryDotCellModel *myCellModel = (JXCategoryDotCellModel *)cellModel;
+    JXJXCategoryDotCellModel *myCellModel = (JXJXCategoryDotCellModel *)cellModel;
     myCellModel.dotHidden = [self.dotStates[index] boolValue];
     myCellModel.relativePosition = self.relativePosition;
     myCellModel.dotSize = self.dotSize;
