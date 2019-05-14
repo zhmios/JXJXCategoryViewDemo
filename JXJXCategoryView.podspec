@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-对JXCategoryView数据选择器部分效果的微调和优化
+对JXCategoryView数据选择器部分效果的微调和优化,对类名进行更改
                        DESC
 
   s.homepage         = 'https://github.com/zhmios/JXJXCategoryViewDemo'
