@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "UIColor+JXAdd.h"
+#import "UIColor+JXJXAdd.h"
 
-@implementation UIColor (JXAdd)
+@implementation UIColor (JXJXAdd)
 
 - (CGFloat)jx_red {
     CGFloat r = 0, g, b, a;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (JXAdd)
+@interface UIColor (JXJXAdd)
 
 @property (nonatomic, assign, readonly) CGFloat jx_red;
 @property (nonatomic, assign, readonly) CGFloat jx_green;

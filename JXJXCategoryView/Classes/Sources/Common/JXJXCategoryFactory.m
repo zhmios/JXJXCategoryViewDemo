@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryFactory.h"
-#import "UIColor+JXAdd.h"
+#import "UIColor+JXJXAdd.h"
 
 @implementation JXJXCategoryFactory
 
