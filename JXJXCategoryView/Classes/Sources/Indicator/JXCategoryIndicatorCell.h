@@ -6,8 +6,8 @@
 //  Copyright © 2018年 jingbo. All rights reserved.
 //
 
-#import "JXCategoryBaseCell.h"
+#import "JXJXCategoryBaseCell.h"
 
-@interface JXCategoryIndicatorCell : JXCategoryBaseCell
+@interface JXCategoryIndicatorCell : JXJXCategoryBaseCell
 
 @end

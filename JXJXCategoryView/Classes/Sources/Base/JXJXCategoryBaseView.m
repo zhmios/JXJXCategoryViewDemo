@@ -151,7 +151,7 @@ struct DelegateFlags {
     }
     JXCategoryBaseCellModel *cellModel = self.dataSource[index];
     [self refreshCellModel:cellModel index:index];
-    JXCategoryBaseCell *cell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    JXJXCategoryBaseCell *cell = (JXJXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     [cell reloadData:cellModel];
 }
 
@@ -257,10 +257,10 @@ struct DelegateFlags {
     JXCategoryBaseCellModel *selectedCellModel = self.dataSource[targetIndex];
     [self refreshSelectedCellModel:selectedCellModel unselectedCellModel:lastCellModel];
 
-    JXCategoryBaseCell *lastCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedIndex inSection:0]];
+    JXJXCategoryBaseCell *lastCell = (JXJXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedIndex inSection:0]];
     [lastCell reloadData:lastCellModel];
 
-    JXCategoryBaseCell *selectedCell = (JXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0]];
+    JXJXCategoryBaseCell *selectedCell = (JXJXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0]];
     [selectedCell reloadData:selectedCellModel];
 
     if (self.cellWidthZoomEnabled) {
@@ -350,7 +350,7 @@ struct DelegateFlags {
 }
 
 - (Class)preferredCellClass {
-    return JXCategoryBaseCell.class;
+    return JXJXCategoryBaseCell.class;
 }
 
 - (void)refreshCellModel:(JXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
@@ -372,7 +372,7 @@ struct DelegateFlags {
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    JXCategoryBaseCell *categoryCell = (JXCategoryBaseCell *)cell;
+    JXJXCategoryBaseCell *categoryCell = (JXJXCategoryBaseCell *)cell;
     [categoryCell reloadData:self.dataSource[indexPath.item]];
 }
 

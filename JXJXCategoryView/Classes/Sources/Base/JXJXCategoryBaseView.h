@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JXCategoryBaseCell.h"
+#import "JXJXCategoryBaseCell.h"
 #import "JXCategoryBaseCellModel.h"
 #import "JXCategoryCollectionView.h"
 #import "JXJXCategoryViewDefines.h"

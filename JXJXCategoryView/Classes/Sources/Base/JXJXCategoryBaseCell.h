@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JXCategoryBaseCellModel.h"
 
-@interface JXCategoryBaseCell : UICollectionViewCell
+@interface JXJXCategoryBaseCell : UICollectionViewCell
 
 @property (nonatomic, strong) JXCategoryBaseCellModel *cellModel;
 

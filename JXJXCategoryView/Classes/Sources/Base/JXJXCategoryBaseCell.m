@@ -6,12 +6,12 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryBaseCell.h"
+#import "JXJXCategoryBaseCell.h"
 
-@interface JXCategoryBaseCell ()
+@interface JXJXCategoryBaseCell ()
 @end
 
-@implementation JXCategoryBaseCell
+@implementation JXJXCategoryBaseCell
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
