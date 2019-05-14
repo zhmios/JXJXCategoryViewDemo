@@ -83,7 +83,7 @@ struct DelegateFlags {
     self.collectionView = ({
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        JXCategoryCollectionView *collectionView = [[JXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+        JXJXCategoryCollectionView *collectionView = [[JXJXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
         collectionView.backgroundColor = [UIColor clearColor];
         collectionView.showsHorizontalScrollIndicator = NO;
         collectionView.showsVerticalScrollIndicator = NO;
@@ -103,7 +103,7 @@ struct DelegateFlags {
         self.collectionView = ({
             UBLeftCommonCollectionViewFlowLayout *layout = [[UBLeftCommonCollectionViewFlowLayout alloc] init];
             layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            JXCategoryCollectionView *collectionView = [[JXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+            JXJXCategoryCollectionView *collectionView = [[JXJXCategoryCollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
             
             layout.leftDistance = leftSpace;
             layout.fixSpaceitem = cellSpacing;

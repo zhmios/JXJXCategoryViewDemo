@@ -7,7 +7,7 @@
 //
 
 #import "JXJXCategoryTitleImageCell.h"
-#import "JXCategoryTitleImageCellModel.h"
+#import "JXJXCategoryTitleImageCellModel.h"
 
 @interface JXJXCategoryTitleImageCell()
 
@@ -26,7 +26,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    JXCategoryTitleImageCellModel *myCellModel = (JXCategoryTitleImageCellModel *)self.cellModel;
+    JXJXCategoryTitleImageCellModel *myCellModel = (JXJXCategoryTitleImageCellModel *)self.cellModel;
     self.titleLabel.hidden = NO;
     self.imageView.hidden = NO;
     CGSize imageSize = myCellModel.imageSize;
@@ -87,7 +87,7 @@
 - (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
-    JXCategoryTitleImageCellModel *myCellModel = (JXCategoryTitleImageCellModel *)cellModel;
+    JXJXCategoryTitleImageCellModel *myCellModel = (JXJXCategoryTitleImageCellModel *)cellModel;
     if (myCellModel.imageName != nil) {
         self.imageView.image = [UIImage imageNamed:myCellModel.imageName];
     }else if (myCellModel.imageURL != nil) {

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryCollectionView.h"
+#import "JXJXCategoryCollectionView.h"
 
-@implementation JXCategoryCollectionView
+@implementation JXJXCategoryCollectionView
 
 - (void)layoutSubviews
 {

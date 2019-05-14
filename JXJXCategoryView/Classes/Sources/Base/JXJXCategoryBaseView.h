@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JXJXCategoryBaseCell.h"
 #import "JXJXCategoryBaseCellModel.h"
-#import "JXCategoryCollectionView.h"
+#import "JXJXCategoryCollectionView.h"
 #import "JXJXCategoryViewDefines.h"
 
 @class JXJXCategoryBaseView;
@@ -65,7 +65,7 @@
 
 @interface JXJXCategoryBaseView : UIView
 
-@property (nonatomic, strong) JXCategoryCollectionView *collectionView;
+@property (nonatomic, strong) JXJXCategoryCollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray <JXJXCategoryBaseCellModel *>*dataSource;
 

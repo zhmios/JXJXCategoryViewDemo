@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JXJXCategoryIndicatorProtocol.h"
 
-@interface JXCategoryCollectionView : UICollectionView
+@interface JXJXCategoryCollectionView : UICollectionView
 
 @property (nonatomic, strong) NSArray <UIView<JXJXCategoryIndicatorProtocol> *> *indicators;
 

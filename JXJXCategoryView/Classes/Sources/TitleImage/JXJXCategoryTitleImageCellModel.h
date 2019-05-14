@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, JXCategoryTitleImageType) {
     JXCategoryTitleImageType_OnlyTitle,
 };
 
-@interface JXCategoryTitleImageCellModel : JXJXCategoryTitleCellModel
+@interface JXJXCategoryTitleImageCellModel : JXJXCategoryTitleCellModel
 
 @property (nonatomic, assign) JXCategoryTitleImageType imageType;
 
