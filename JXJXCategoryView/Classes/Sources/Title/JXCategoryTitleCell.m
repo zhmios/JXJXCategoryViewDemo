@@ -41,7 +41,7 @@
     self.maskTitleLabel.center = self.contentView.center;
 }
 
-- (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
+- (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
     JXCategoryTitleCellModel *myCellModel = (JXCategoryTitleCellModel *)cellModel;

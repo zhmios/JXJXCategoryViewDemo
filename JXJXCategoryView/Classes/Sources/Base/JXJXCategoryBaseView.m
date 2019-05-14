@@ -149,7 +149,7 @@ struct DelegateFlags {
     if (index >= self.dataSource.count) {
         return;
     }
-    JXCategoryBaseCellModel *cellModel = self.dataSource[index];
+    JXJXCategoryBaseCellModel *cellModel = self.dataSource[index];
     [self refreshCellModel:cellModel index:index];
     JXJXCategoryBaseCell *cell = (JXJXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     [cell reloadData:cellModel];
@@ -181,7 +181,7 @@ struct DelegateFlags {
     __block CGFloat totalItemWidth = self.cellSpacing;
     CGFloat totalCellWidth = 0;
     for (int i = 0; i < self.dataSource.count; i++) {
-        JXCategoryBaseCellModel *cellModel = self.dataSource[i];
+        JXJXCategoryBaseCellModel *cellModel = self.dataSource[i];
         cellModel.index = i;
         cellModel.cellWidth = [self preferredCellWidthAtIndex:i] + self.cellWidthIncrement;
         totalCellWidth += cellModel.cellWidth;
@@ -205,7 +205,7 @@ struct DelegateFlags {
 //            cellSpacing = (self.bounds.size.width - totalCellWidth)/(self.dataSource.count - 1 + 2);
 //        }
         self.innerCellSpacing = self.cellSpacing;
-        [self.dataSource enumerateObjectsUsingBlock:^(JXCategoryBaseCellModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self.dataSource enumerateObjectsUsingBlock:^(JXJXCategoryBaseCellModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.cellSpacing = cellSpacing;
         }];
     }else {
@@ -215,7 +215,7 @@ struct DelegateFlags {
     __block CGFloat frameXOfSelectedCell = self.innerCellSpacing;
     __block CGFloat selectedCellWidth = 0;
     totalItemWidth = self.innerCellSpacing;
-    [self.dataSource enumerateObjectsUsingBlock:^(JXCategoryBaseCellModel * cellModel, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.dataSource enumerateObjectsUsingBlock:^(JXJXCategoryBaseCellModel * cellModel, NSUInteger idx, BOOL * _Nonnull stop) {
         if (idx < self.selectedIndex) {
             frameXOfSelectedCell += cellModel.cellWidth + self.innerCellSpacing;
         }else if (idx == self.selectedIndex) {
@@ -253,8 +253,8 @@ struct DelegateFlags {
         return NO;
     }
 
-    JXCategoryBaseCellModel *lastCellModel = self.dataSource[self.selectedIndex];
-    JXCategoryBaseCellModel *selectedCellModel = self.dataSource[targetIndex];
+    JXJXCategoryBaseCellModel *lastCellModel = self.dataSource[self.selectedIndex];
+    JXJXCategoryBaseCellModel *selectedCellModel = self.dataSource[targetIndex];
     [self refreshSelectedCellModel:selectedCellModel unselectedCellModel:lastCellModel];
 
     JXJXCategoryBaseCell *lastCell = (JXJXCategoryBaseCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedIndex inSection:0]];
@@ -291,7 +291,7 @@ struct DelegateFlags {
 }
 
 
-- (void)refreshSelectedCellModel:(JXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXCategoryBaseCellModel *)unselectedCellModel {
+- (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel {
     selectedCellModel.selected = YES;
     selectedCellModel.cellWidthZoomScale = self.cellWidthZoomScale;
     unselectedCellModel.selected = NO;
@@ -332,8 +332,8 @@ struct DelegateFlags {
             [self _selectCellAtIndex:targetIndex handleContentScrollView:NO];
         }
         if (self.cellWidthZoomEnabled && self.cellWidthZoomScrollGradientEnabled) {
-            JXCategoryBaseCellModel *leftCellModel = (JXCategoryBaseCellModel *)self.dataSource[baseIndex];
-            JXCategoryBaseCellModel *rightCellModel = (JXCategoryBaseCellModel *)self.dataSource[baseIndex + 1];
+            JXJXCategoryBaseCellModel *leftCellModel = (JXJXCategoryBaseCellModel *)self.dataSource[baseIndex];
+            JXJXCategoryBaseCellModel *rightCellModel = (JXJXCategoryBaseCellModel *)self.dataSource[baseIndex + 1];
             leftCellModel.cellWidthZoomScale = [JXJXCategoryFactory interpolationFrom:self.cellWidthZoomScale to:1.0 percent:remainderRatio];
             rightCellModel.cellWidthZoomScale = [JXJXCategoryFactory interpolationFrom:1.0 to:self.cellWidthZoomScale percent:remainderRatio];
             [self.collectionView.collectionViewLayout invalidateLayout];
@@ -353,7 +353,7 @@ struct DelegateFlags {
     return JXJXCategoryBaseCell.class;
 }
 
-- (void)refreshCellModel:(JXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
+- (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
 
 }
 
@@ -388,7 +388,7 @@ struct DelegateFlags {
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    JXCategoryBaseCellModel *cellModel = self.dataSource[indexPath.item];
+    JXJXCategoryBaseCellModel *cellModel = self.dataSource[indexPath.item];
     return CGSizeMake(cellModel.cellWidth, self.bounds.size.height);
 }
 
@@ -417,7 +417,7 @@ struct DelegateFlags {
 {
     CGFloat x = self.innerCellSpacing;
     for (int i = 0; i < targetIndex; i ++) {
-        JXCategoryBaseCellModel *cellModel = self.dataSource[i];
+        JXJXCategoryBaseCellModel *cellModel = self.dataSource[i];
         x += cellModel.cellWidth + self.innerCellSpacing;
     }
     CGFloat width = self.dataSource[targetIndex].cellWidth;

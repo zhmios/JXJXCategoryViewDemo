@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JXCategoryBaseCellModel.h"
+#import "JXJXCategoryBaseCellModel.h"
 
-@interface JXCategoryIndicatorCellModel : JXCategoryBaseCellModel
+@interface JXCategoryIndicatorCellModel : JXJXCategoryBaseCellModel
 
 @property (nonatomic, assign) BOOL sepratorLineShowEnabled;
 

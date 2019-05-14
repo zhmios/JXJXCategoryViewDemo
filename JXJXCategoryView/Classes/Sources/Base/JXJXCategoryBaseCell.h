@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JXCategoryBaseCellModel.h"
+#import "JXJXCategoryBaseCellModel.h"
 
 @interface JXJXCategoryBaseCell : UICollectionViewCell
 
-@property (nonatomic, strong) JXCategoryBaseCellModel *cellModel;
+@property (nonatomic, strong) JXJXCategoryBaseCellModel *cellModel;
 
 - (void)initializeViews NS_REQUIRES_SUPER;
 
-- (void)reloadData:(JXCategoryBaseCellModel *)cellModel NS_REQUIRES_SUPER;
+- (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel NS_REQUIRES_SUPER;
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
-#import "JXCategoryBaseCellModel.h"
+#import "JXJXCategoryBaseCellModel.h"
 
-@implementation JXCategoryBaseCellModel
+@implementation JXJXCategoryBaseCellModel
 
 - (CGFloat)cellWidth {
     if (_cellWidthZoomEnabled) {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JXJXCategoryBaseCell.h"
-#import "JXCategoryBaseCellModel.h"
+#import "JXJXCategoryBaseCellModel.h"
 #import "JXCategoryCollectionView.h"
 #import "JXJXCategoryViewDefines.h"
 
@@ -67,7 +67,7 @@
 
 @property (nonatomic, strong) JXCategoryCollectionView *collectionView;
 
-@property (nonatomic, strong) NSArray <JXCategoryBaseCellModel *>*dataSource;
+@property (nonatomic, strong) NSArray <JXJXCategoryBaseCellModel *>*dataSource;
 
 @property (nonatomic, weak) id<JXCategoryViewDelegate>delegate;
 
@@ -140,7 +140,7 @@
  @param selectedCellModel 选中的cellModel
  @param unselectedCellModel 取消选中的cellModel
  */
-- (void)refreshSelectedCellModel:(JXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXCategoryBaseCellModel *)unselectedCellModel NS_REQUIRES_SUPER;
+- (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel NS_REQUIRES_SUPER;
 
 /**
  关联的contentScrollView的contentOffset发生了改变
@@ -181,6 +181,6 @@
  @param cellModel 待重置的cellModel
  @param index 目标index
  */
-- (void)refreshCellModel:(JXCategoryBaseCellModel *)cellModel index:(NSInteger)index;
+- (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index;
 
 @end

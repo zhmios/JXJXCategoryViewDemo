@@ -32,7 +32,7 @@
     self.dataSource = tempArray;
 }
 
-- (void)refreshCellModel:(JXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
+- (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
     JXCategoryDotCellModel *myCellModel = (JXCategoryDotCellModel *)cellModel;

@@ -27,7 +27,7 @@
     self.imageView.center = self.contentView.center;
 }
 
-- (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
+- (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
     JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)cellModel;

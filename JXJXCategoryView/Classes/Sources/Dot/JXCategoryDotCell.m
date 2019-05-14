@@ -60,7 +60,7 @@
     [CATransaction commit];
 }
 
-- (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
+- (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
     JXCategoryDotCellModel *myCellModel = (JXCategoryDotCellModel *)cellModel;

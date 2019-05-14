@@ -38,7 +38,7 @@
     self.dataSource = tempArray;
 }
 
-- (void)refreshSelectedCellModel:(JXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXCategoryBaseCellModel *)unselectedCellModel {
+- (void)refreshSelectedCellModel:(JXJXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXJXCategoryBaseCellModel *)unselectedCellModel {
     [super refreshSelectedCellModel:selectedCellModel unselectedCellModel:unselectedCellModel];
 
     JXCategoryImageCellModel *myUnselectedCellModel = (JXCategoryImageCellModel *)unselectedCellModel;
@@ -48,7 +48,7 @@
     myselectedCellModel.imageZoomScale = self.imageZoomScale;
 }
 
-- (void)refreshCellModel:(JXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
+- (void)refreshCellModel:(JXJXCategoryBaseCellModel *)cellModel index:(NSInteger)index {
     [super refreshCellModel:cellModel index:index];
 
     JXCategoryImageCellModel *myCellModel = (JXCategoryImageCellModel *)cellModel;
@@ -71,7 +71,7 @@
     }
 }
 
-- (void)refreshLeftCellModel:(JXCategoryBaseCellModel *)leftCellModel rightCellModel:(JXCategoryBaseCellModel *)rightCellModel ratio:(CGFloat)ratio {
+- (void)refreshLeftCellModel:(JXJXCategoryBaseCellModel *)leftCellModel rightCellModel:(JXJXCategoryBaseCellModel *)rightCellModel ratio:(CGFloat)ratio {
     [super refreshLeftCellModel:leftCellModel rightCellModel:rightCellModel ratio:ratio];
 
     JXCategoryImageCellModel *leftModel = (JXCategoryImageCellModel *)leftCellModel;

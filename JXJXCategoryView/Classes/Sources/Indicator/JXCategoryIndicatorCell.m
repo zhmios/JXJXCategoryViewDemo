@@ -35,7 +35,7 @@
     self.separatorLine.frame = CGRectMake(self.bounds.size.width - lineWidth + self.cellModel.cellSpacing/2, (self.bounds.size.height - lineHeight)/2.0, lineWidth, lineHeight);
 }
 
-- (void)reloadData:(JXCategoryBaseCellModel *)cellModel {
+- (void)reloadData:(JXJXCategoryBaseCellModel *)cellModel {
     [super reloadData:cellModel];
 
     JXCategoryIndicatorCellModel *model = (JXCategoryIndicatorCellModel *)cellModel;

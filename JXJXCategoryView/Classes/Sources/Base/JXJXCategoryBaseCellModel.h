@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface JXCategoryBaseCellModel : NSObject
+@interface JXJXCategoryBaseCellModel : NSObject
 
 @property (nonatomic, assign) NSUInteger index;
 
